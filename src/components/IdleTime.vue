@@ -4,7 +4,7 @@ export default {
   props: {
     seconds: {
       type: Number,
-      default: 60
+      default: 600
     }
   },
   render(createElement) {
