@@ -60,7 +60,7 @@ export default {
       const swiper = new Swiper(this.$refs.swiper, {
         direction: 'horizontal',
         //slidesPerView: Math.min(this.session.itemGroup.items.length, 3.25),//CHANGED
-        slidesPerView: auto,
+        slidesPerView: 5.25,
         //slidesPerViewFit : false,
         //roundLengths: false,
         slidesPerColumn: this.slidesPerColumn(),
