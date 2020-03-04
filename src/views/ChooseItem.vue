@@ -61,8 +61,8 @@ export default {
         direction: 'horizontal',
         //slidesPerView: Math.min(this.session.itemGroup.items.length, 3.25),//CHANGED
         slidesPerView: auto,
-        slidesPerViewFit : false,
-        roundLengths: false,
+        //slidesPerViewFit : false,
+        //roundLengths: false,
         slidesPerColumn: this.slidesPerColumn(),
         spaceBetween: 50,
         centeredSlides: true,//CHANGED
