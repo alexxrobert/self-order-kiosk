@@ -62,7 +62,7 @@ export default {
         slidesPerView: Math.min(this.session.itemGroup.items.length, 3.25),
         slidesPerColumn: this.slidesPerColumn(),
         spaceBetween: 50,
-        centeredSlides: false,
+        centeredSlides: true,//CHANGED
         breakpoints: {
           [breakpoints[1280]]: {
             slidesPerView: Math.min(this.session.itemGroup.items.length, 2.25),
