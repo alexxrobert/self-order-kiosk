@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="app-content">
-        <div class="d-block">
+        <div class="d-block" style="width: 1550px !important">
           <div ref="swiper" class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId">
