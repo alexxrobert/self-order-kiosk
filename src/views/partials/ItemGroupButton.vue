@@ -38,7 +38,7 @@ export default {
       const height = this.$device.screen.safeArea.height()
       const safeArea = Math.min(width, height)
       const wrapper = this.$refs.wrapper.offsetHeight
-      const size = Math.min(safeArea, wrapper) / 2.5 ////////////////////here
+      const size = Math.min(safeArea, wrapper) / 2.3 ////////////////////here
 
       this.$refs.clipping.style.width = `${size}px`
       this.$refs.clipping.style.height = `${size}px`
