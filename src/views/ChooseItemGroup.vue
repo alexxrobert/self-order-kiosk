@@ -74,7 +74,7 @@ export default {
       return parseInt(slidesPerView) === 1
     },
     spaceBetween(){ /////EXPERIMENTAL
-    return 50; 
+    return 30; 
     },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
