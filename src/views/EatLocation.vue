@@ -48,7 +48,8 @@ export default {
     },
     select(location) {
       this.session.order.takeOut = location === 'takeOut'
-      this.$router.push({ name: 'whoIAm' })
+     // this.$router.push({ name: 'whoIAm' })
+      this.$router.push({ name: 'chooseItemGroup' })
     }
   }
 }
