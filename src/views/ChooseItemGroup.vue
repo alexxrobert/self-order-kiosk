@@ -66,6 +66,9 @@ export default {
       const routeName = this.orderHasItem ? 'orderSummary' : 'newOrder'
       this.$router.push({ name: routeName })
     },
+    slidesPerColumn(){
+      return 2;
+    },
     centeredSlides() {
       const slidesPerView = this.slidesPerView()
       return parseInt(slidesPerView) === 1
@@ -77,6 +80,7 @@ export default {
         direction: 'horizontal',
         slidesPerView: this.slidesPerView(),
         centeredSlides: this.centeredSlides(),
+        slidesPerColumn: this.slidesPerColumn(),
         spaceBetween: 30
       })
 
