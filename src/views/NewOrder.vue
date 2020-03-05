@@ -40,7 +40,8 @@ export default {
   methods: {
     newOrder() {
       this.session.order = new Order()
-      this.$router.push({ name: 'chooseItemGroup' })
+      //this.$router.push({ name: 'chooseItemGroup' })
+      this.$router.push({ name: 'eatLocation' })
     },
     restart() {
       this.$router.push({ name: 'start' })
