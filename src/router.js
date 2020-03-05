@@ -23,16 +23,22 @@ export default new Router({
       component: UpdateAvailable,
       meta: { step: -1 }
     },
-    {
-      path: '/',
-      name: 'start',
-      component: Start,
-      meta: { step: 0 }
-    },
+    //{
+     // path: '/',
+     // name: 'start',
+      //component: Start,
+      //meta: { step: 0 }
+    //},
     {
       path: '/new-order',
       name: 'newOrder',
       component: NewOrder,
+      meta: { step: 0 }
+    },
+    {
+      path: '/eat-location',
+      name: 'eatLocation',
+      component: EatLocation,
       meta: { step: 1 }
     },
     {
