@@ -73,6 +73,9 @@ export default {
       const slidesPerView = this.slidesPerView()
       return parseInt(slidesPerView) === 1
     },
+    spaceBetween(){ /////EXPERIMENTAL
+    return 50; 
+    },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
 
@@ -81,7 +84,7 @@ export default {
         slidesPerView: this.slidesPerView(),
         centeredSlides: this.centeredSlides(),
         slidesPerColumn: this.slidesPerColumn(),
-        spaceBetween: 30
+        spaceBetween: this.spaceBetween()
       })
 
       window.addEventListener('resize', () => {
