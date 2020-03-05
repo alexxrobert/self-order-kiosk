@@ -18,7 +18,7 @@ export default {
       return this.$i18n.locale
     },
     symbol() {
-      return this.locale === 'br' ? 'R$' : '$'
+      return this.locale === 'br' ? 'R$' : '€'
     }
   }
 }
