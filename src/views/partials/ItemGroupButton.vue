@@ -1,6 +1,6 @@
 <template>
   <ScaleTransition>
-    <div ref="wrapper" class="d-inline-flex align-items-center h-95">
+    <div ref="wrapper" class="d-inline-flex align-items-center h-100">
       <button type="button" class="btn shadow-none p-0" @click="$emit('click', itemGroup)">
         <div ref="clipping" class="rounded-clipping">
           <ProgressiveImage ref="image" :image="itemGroup" :alt="itemGroup.name" @preload="$emit('imagePreload')"/>
