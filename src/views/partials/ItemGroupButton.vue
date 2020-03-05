@@ -5,7 +5,7 @@
         <div ref="clipping" class="rounded-clipping">
           <ProgressiveImage ref="image" :image="itemGroup" :alt="itemGroup.name" @preload="$emit('imagePreload')"/>
         </div>
-        <div class="font-weight-bold py-3 py-lg-5">
+        <div class="font-weight-bold ">
           {{ itemGroup.name }}
         </div>
       </button>
