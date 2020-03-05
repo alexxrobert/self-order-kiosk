@@ -103,6 +103,7 @@ export default {
       this.$router.push({ name: 'chooseItem' })
     },
     slidesPerView() {
+     return Math.min(this.itemGroups.length, 4.25)
       if (this.$device.screen.orientation() === 'horizontal') {
         if (this.$device.screen.safeArea.width() >= breakpoints[1280]) {
           return Math.min(this.itemGroups.length, 3.5)
