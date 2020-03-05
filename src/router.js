@@ -17,12 +17,12 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/update',
-      name: 'updateAvailable',
-      component: UpdateAvailable,
-      meta: { step: -1 }
-    },
+    //{
+    //  path: '/update',
+    //  name: 'updateAvailable',
+    //  component: UpdateAvailable,
+   //   meta: { step: -1 }
+  //  },
     //{
      // path: '/',
      // name: 'start',
