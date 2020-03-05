@@ -1,7 +1,7 @@
 <template>
-  <span>
-    <small><sup>{{ symbol }}</sup></small>{{ amount | numeral(locale) }}
-  </span>
+  <p>
+   {{ amount | numeral(locale) }} {{ symbol }}
+  </p>
 </template>
 
 <script>
