@@ -41,7 +41,9 @@ export default {
   },
   methods: {
     back() {
-      this.$router.push({ name: 'orderSummary' })
+      //this.$router.push({ name: 'orderSummary' })
+      const routeName = this.orderHasItem ? 'orderSummary' : 'newOrder'
+      this.$router.push({ name: routeName })
     },
     restart() {
       this.$router.push({ name: 'start' })
