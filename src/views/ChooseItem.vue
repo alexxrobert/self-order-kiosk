@@ -104,7 +104,7 @@ export default {
     },
     slidesPerColumn() {
       if (this.$device.screen.safeArea.height() >= breakpoints[900]) return 2
-      else return 1
+      else return 2
     }
   }
 }
