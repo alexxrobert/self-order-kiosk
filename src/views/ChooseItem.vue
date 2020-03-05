@@ -65,7 +65,7 @@ export default {
         //slidesPerViewFit : false,
         //roundLengths: false,
         slidesPerColumn: this.slidesPerColumn(),
-        spaceBetween: 50,
+        //spaceBetween: 50,
         centeredSlides: false,//CHANGED
         breakpoints: {
           [breakpoints[1280]]: {
