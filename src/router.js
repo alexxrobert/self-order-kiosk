@@ -30,7 +30,7 @@ export default new Router({
       //meta: { step: 0 }
     //},
     {
-      path: '/new-order',
+      path: '/',
       name: 'newOrder',
       component: NewOrder,
       meta: { step: 0 }
