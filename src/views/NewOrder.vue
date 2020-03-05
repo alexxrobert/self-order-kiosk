@@ -24,6 +24,11 @@ import { Order } from '@/models'
 export default {
   name: 'newOrder',
   async mounted() {
+  this.$api.virtualPath = "burger-place"
+          this.$api.token = "AccessTokenUsedByTheApplicationForAuthentication=="
+          this.session.started = true
+  
+  
     if (!this.session.started) {
       this.restart()
       return
