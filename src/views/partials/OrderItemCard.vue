@@ -18,7 +18,7 @@
         <FontAwesome icon="plus" class="m-auto"/>
       </button>
       <span style="text-align: left; font-weight: bold; margin-left: 1.5rem;">{{ item.name }} {{ index }}
-       <button type="button" class="btn btn-outline-primary btn-rounded" @click="delete">
+       <button type="button" class="btn btn-outline-primary btn-rounded" @click="deletex">
         <FontAwesome icon="trash-alt" class="m-auto"/>
       </button>
       </span>
@@ -51,7 +51,7 @@ export default {
     increment() {
       this.session.order.increment(this.item)
     },
-    delete() {
+    deletex() {
     this.session.order.items.splice(index,1);
     }
   },
