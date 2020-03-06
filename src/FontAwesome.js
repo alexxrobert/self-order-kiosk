@@ -12,7 +12,7 @@ import {
   faSyncAlt,
   faTimesCircle,
   faUtensils,
-  faTrash-alt
+  faTrash
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -25,7 +25,7 @@ library.add(faBackspace)
 library.add(faCheck)
 library.add(faMinus)
 library.add(faPlus)
-library.add(faTrash-alt)
+library.add(faTrash)
 library.add(faShoppingBag)
 library.add(faSmile)
 library.add(faSyncAlt)
