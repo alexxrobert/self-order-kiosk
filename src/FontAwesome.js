@@ -11,7 +11,7 @@ import {
   faShoppingBag,
   faSyncAlt,
   faTimesCircle,
-  faUtensils
+  faUtensils,
   faTrash-alt
 } from '@fortawesome/free-solid-svg-icons'
 
