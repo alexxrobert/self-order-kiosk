@@ -112,8 +112,8 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "back": "Voltar",
+  "es": {
+    "back": "Atrás",
     "tap_to_select": "Toque para selecionar"
   },
   "en": {
