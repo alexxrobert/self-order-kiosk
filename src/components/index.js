@@ -1,4 +1,5 @@
 import Currency from './Currency'
+import Currency2 from './Currency2'
 import IdleTime from './IdleTime'
 import Keyboard from './Keyboard'
 import Loader from './Loader'
