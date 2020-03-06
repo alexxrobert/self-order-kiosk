@@ -12,8 +12,8 @@
         <div ref="swiper" class="swiper-container flex-grow-1">
           <div class="swiper-wrapper">
             <div class="swiper-slide d-flex align-items-center px-3 px-lg-5 border-bottom"
-              v-for="item in session.order.items" :key="item.id">
-              <OrderItemCard :item="item"/>
+              v-for="item,index in session.order.items" :key="item.id">
+              <OrderItemCard :item="item" index="index"/>
             </div>
           </div>
         </div>
