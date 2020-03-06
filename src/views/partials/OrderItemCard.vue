@@ -51,8 +51,8 @@ export default {
     increment() {
       this.session.order.increment(this.item)
     },
-    delete(){
-    this.session.order.items.splice(index,1)
+    delete() {
+    this.session.order.items.splice(index,1);
     }
   },
   computed: {
