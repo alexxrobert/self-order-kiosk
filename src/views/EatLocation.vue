@@ -59,11 +59,11 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "title": "Onde você gostaria de comer?",
+  "es": {
+    "title": "Donde les gostaria comer?",
     "eat_here": "Aqui",
-    "take_out": "Vou levar",
-    "back": "Voltar"
+    "take_out": "Para llevar",
+    "back": "Atras"
   },
   "en": {
     "title": "Where would you like to eat?",
