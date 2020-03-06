@@ -85,7 +85,7 @@ export default {
 <i18n>
 {
   "es": {
-    "no_cost": "gratuito"
+    "no_cost": "gratis"
   },
   "en": {
     "no_cost": "no cost"
