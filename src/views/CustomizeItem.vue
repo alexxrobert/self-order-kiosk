@@ -132,11 +132,11 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "add": "Adicionar",
-    "back": "Voltar",
+  "es": {
+    "add": "Añadir",
+    "back": "Atras",
     "of": "de",
-    "choose_an_option": "Escolha uma opção"
+    "choose_an_option": "Elige una opcion"
   },
   "en": {
     "add": "Add",
