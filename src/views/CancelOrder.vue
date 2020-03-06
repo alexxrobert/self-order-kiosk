@@ -59,11 +59,11 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "cancel_order": "Cancelar pedido?",
-    "warning": "Seu pedido será cancelado. Nós não poderemos desfazer essa ação.",
-    "no": "Não, não cancele",
-    "yes": "Sim, cancele o pedido"
+  "es": {
+    "cancel_order": "¿Cancelar pedido?",
+    "warning": "Su pedido será cancelado. Todos los datos serán borrados ",
+    "no": "No, sigo con el pedido",
+    "yes": "Si, cancele el pedido"
   },
   "en": {
     "cancel_order": "Cancel order?",
