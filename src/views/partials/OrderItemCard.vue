@@ -52,7 +52,7 @@ export default {
       this.session.order.increment(this.item)
     },
     deletex() {
-    this.session.order.items.splice(index,1);
+    this.session.order.items.splice(this.index,1);
     }
   },
   computed: {
