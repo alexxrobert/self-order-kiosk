@@ -18,7 +18,7 @@
         <FontAwesome icon="plus" class="m-auto"/>
       </button>
       <span style="text-align: left; font-weight: bold; margin-left: 3rem;">{{ item.name }}</span>
-      <span style="text-align: left;display: block; margin-left: 3rem;">{{ options }}</span>
+      <span style="text-align: left; max-width: 930px; margin-left: 3rem;">{{ options }}</span>
       <div class="text-right font-weight-bold ml-auto">
         <Currency2 :amount="item.total()"/>
       </div>
