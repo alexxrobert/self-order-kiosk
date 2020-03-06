@@ -37,7 +37,8 @@ export default {
     item: {
       type: Item,
       required: true
-    }
+    },
+    indexfake
   },
   methods: {
     decrement() {
