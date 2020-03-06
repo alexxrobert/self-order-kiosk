@@ -57,9 +57,9 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "order_here": "Peça aqui",
-    "start_button": "Toque para começar"
+  "es": {
+    "order_here": "Pedir aqui",
+    "start_button": "Toque para comenzar"
   },
   "en": {
     "order_here": "Order here",
