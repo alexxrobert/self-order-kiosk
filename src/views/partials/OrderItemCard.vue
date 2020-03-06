@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column w-100">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex align-items-center mb-1">
       <button type="button" class="btn btn-outline-primary btn-rounded" @click="decrement">
         <FontAwesome icon="minus" class="m-auto"/>
       </button>
@@ -23,7 +23,7 @@
       <span style="text-align: left; max-width: 930px; margin-left: 2rem;">{{ options }}</span>
       <div class="text-right font-weight-bold ml-auto">
         <Currency2 :amount="item.total()"/> 
-         <button type="button" class="btn btn-outline-primary btn-rounded" @click="deletex">
+         <button type="button" class="btn btn-outline-primary btn-rounded"  style="padding-bottom: 4px" @click="deletex">
         <FontAwesome icon="trash" class="m-auto"/>
       </button>
       </div>
