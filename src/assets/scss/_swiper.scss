@@ -3,15 +3,15 @@
   width: 100%;
   //width: 1550px !important;
 
-  .swiper-wrapper .swiper-slide{
+  .swiper-wrapper .swiper-slide:not(.d-flex){
     height: auto; // Make all slides the same height based on the tallest slide
     width: 300px !important;
   }
-   .swiper-wrapper .swiper-slide.swiper-slide-active{
+   .swiper-wrapper .swiper-slide.swiper-slide-active:not(.d-flex){
     height: auto; // Make all slides the same height based on the tallest slide
     width: 300px !important;
   }
-    .swiper-wrapper .swiper-slide.swiper-slide-next{
+    .swiper-wrapper .swiper-slide.swiper-slide-next:not(.d-flex){
     height: auto; // Make all slides the same height based on the tallest slide
     width: 300px !important;
   }
