@@ -17,6 +17,7 @@
       <button type="button" class="btn btn-outline-primary btn-rounded" @click="increment">
         <FontAwesome icon="plus" class="m-auto"/>
       </button>
+      <span style="text-align: left">{{ item.name }}</span>
       <div class="text-right font-weight-bold ml-auto">
         <Currency :amount="item.total()"/>
       </div>
