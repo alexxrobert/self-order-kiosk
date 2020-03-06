@@ -10,6 +10,7 @@ import SafeArea from './SafeArea'
 export default {
   install (Vue) {
     Vue.component('Currency', Currency)
+    Vue.component('Currency2', Currency2)
     Vue.component('IdleTime', IdleTime)
     Vue.component('Keyboard', Keyboard)
     Vue.component('Loader', Loader)
