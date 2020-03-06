@@ -1,6 +1,6 @@
   
 <template>
-  <p>
+  <p style="margin-top: 1rem !important;">
    {{ amount | numeral(locale) }} {{ symbol }}
   </p>
 </template>
