@@ -6,7 +6,7 @@
         <div class="rounded-clipping mr-3 flex-shrink-0">
           <ProgressiveImage :image="session.item" :alt="session.item.name" :autoload="true"/>
         </div>
-        <div style="font-weight: bold" class="">${session.item.name}</div>
+        <div style="font-weight: bold" class="">{session.item.name}</div>
         <SlideUpTransition>
           <div class="m-auto" :key="optionGroup.id">
             {{ optionGroup.title }}
