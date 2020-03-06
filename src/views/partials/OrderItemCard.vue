@@ -18,13 +18,14 @@
         <FontAwesome icon="plus" class="m-auto"/>
       </button>
       <span style="text-align: left; font-weight: bold; margin-left: 1.5rem;">{{ item.name }} {{ index }}
-       <button type="button" class="btn btn-outline-primary btn-rounded" @click="deletex">
-        <FontAwesome icon="trash" class="m-auto"/>
-      </button>
+      
       </span>
       <span style="text-align: left; max-width: 930px; margin-left: 2rem;">{{ options }}</span>
       <div class="text-right font-weight-bold ml-auto">
-        <Currency2 :amount="item.total()"/>
+        <Currency2 :amount="item.total()"/> 
+         <button type="button" class="btn btn-outline-primary btn-rounded" @click="deletex">
+        <FontAwesome icon="trash" class="m-auto"/>
+      </button>
       </div>
     </div>
     
