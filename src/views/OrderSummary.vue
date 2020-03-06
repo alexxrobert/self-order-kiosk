@@ -92,16 +92,16 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "back": "Cardápio",
+  "es": {
+    "back": "+ Carta",
     "cancel_order": "Cancelar",
-    "continue": "Finalizar",
-    "title": "Seu pedido"
+    "continue": "Finalizar y pagar",
+    "title": "Su pedido"
   },
   "en": {
-    "back": "Menu",
+    "back": "+ Menu",
     "cancel_order": "Cancel",
-    "continue": "Complete",
+    "continue": "Finish order and pay",
     "title": "Your order"
   }
 }
