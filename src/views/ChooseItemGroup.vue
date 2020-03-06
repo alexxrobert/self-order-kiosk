@@ -137,12 +137,12 @@ export default {
 
 <i18n>
 {
-  "br": {
-    "back": "Voltar",
+  "es": {
+    "back": "Atrás",
     "tap_to_select": "Toque para selecionar",
-    "title_with_items": "O que mais você gostaria hoje?",
-    "title_without_items": "O que você gostaria hoje?",
-    "order_summary": "Meu pedido"
+    "title_with_items": "¿Qué más te gustaría hoy?",
+    "title_without_items": "¿Qué te gustaría comer hoy?",
+    "order_summary": "Mi pedido"
   },
   "en": {
     "back": "Back",
