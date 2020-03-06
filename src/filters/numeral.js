@@ -1,21 +1,21 @@
 import numeral from 'numeral'
 
-numeral.register('locale', 'br', {
+numeral.register('locale', 'es', {
   delimiters: {
     thousands: '.',
     decimal: ','
   },
   abbreviations: {
     thousand: 'mil',
-    million: 'milhões',
-    billion: 'bilhões',
-    trillion: 'trilhões'
+    million: 'mmillones',
+    billion: 'billiones',
+    trillion: 'triliones'
   },
   ordinal: function () {
     return 'º'
   },
   currency: {
-    symbol: 'R$'
+    symbol: '€'
   }
 })
 
