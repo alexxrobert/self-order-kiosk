@@ -1,6 +1,6 @@
 export default {
   install (Vue) {
-    const locale = /br/i.test(navigator.language) ? 'br' : 'en'
+    //const locale = /br/i.test(navigator.language) ? 'br' : 'en'
     const locale = 'es'
 
     Vue.mixin({
