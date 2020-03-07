@@ -29,8 +29,8 @@
 
 <script>
 import { Order } from '@/models'
-import VectorFlagBR from 'vectors/VectorFlagBR'
-import VectorFlagUS from 'vectors/VectorFlagUS'
+import VectorFlagBR from '../vectors/VectorFlagBR'
+import VectorFlagUS from '../vectors/VectorFlagUS'
 
 export default {
   name: 'newOrder',
