@@ -56,6 +56,7 @@ export default {
       this.$api.locale = locale
       this.$i18n.locale = locale
       this.$session.locale = locale
+      return
       this.$router.push({ name: 'newOrder' })
     },
     newOrder() {
