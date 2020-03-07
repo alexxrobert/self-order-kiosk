@@ -9,6 +9,14 @@
       <div class="app-content">
         <Logo class="m-auto"/>
       </div>
+      <div class="text-center">
+                <button type="button" class="btn btn-flag" @click="changeLocale('br')">
+                  <span class="flag-icon flag-icon-br"></span>
+                </button>
+                <button type="button" class="btn btn-flag" @click="changeLocale('en')">
+                  <span class="flag-icon flag-icon-us"></span>
+                </button>
+              </div>
       <div class="app-footer bg-primary p-3 p-md-5">
         <span class="text-uppercase m-auto">
           {{ $t('start_button') }}
@@ -38,6 +46,12 @@ export default {
     this.session.theme = app.theme
   },
   methods: {
+    changeLocale(locale) {
+      this.$api.locale = locale
+      this.$i18n.locale = locale
+      this.$session.locale = locale
+      this.$router.push({ name: 'NewOrder' })
+    },
     newOrder() {
       this.session.order = new Order()
       //this.$router.push({ name: 'chooseItemGroup' })
