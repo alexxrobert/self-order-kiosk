@@ -10,7 +10,7 @@
         <Logo class="m-auto"/>
       </div>
       <div class="text-center">
-                <button type="button" class="btn btn-flag" @click="changeLocale('br')">
+                <button type="button" class="btn btn-flag" @click="changeLocale('es')">
                   <span class="flag-icon flag-icon-br"></span>
                 </button>
                 <button type="button" class="btn btn-flag" @click="changeLocale('en')">
@@ -50,7 +50,7 @@ export default {
       this.$api.locale = locale
       this.$i18n.locale = locale
       this.$session.locale = locale
-      this.$router.push({ name: 'NewOrder' })
+      this.$router.push({ name: 'newOrder' })
     },
     newOrder() {
       this.session.order = new Order()
