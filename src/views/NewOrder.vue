@@ -9,9 +9,7 @@
       <div class="app-content">
         <Logo class="m-auto"/>
          <div class="text-center">
-                <button type="button" class="btn btn-flag" @click="changeLocale('es')">
-                  <span class="flag-icon flag-icon-br"></span>
-                </button>
+               <VectorFlagES>
                 <button type="button" class="btn btn-flag" @click="changeLocale('en')">
                   <VectorFlagUS>
                 </button>
