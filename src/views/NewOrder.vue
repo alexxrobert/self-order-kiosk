@@ -34,6 +34,9 @@ import VectorFlagUS from '../vectors/VectorFlagUS'
 
 export default {
   name: 'newOrder',
+   components: {
+    VectorFlagUS, VectorFlagBR
+  },
   async mounted() {
   this.$api.virtualPath = "burger-place"
           this.$api.token = "AccessTokenUsedByTheApplicationForAuthentication=="
