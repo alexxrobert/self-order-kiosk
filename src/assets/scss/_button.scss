@@ -20,3 +20,12 @@
   width: 42px;
   height: 42px;
 }
+
+.btn.btn-flag {
+  box-shadow: none;
+
+  .flag-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
