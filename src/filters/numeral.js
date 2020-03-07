@@ -3,25 +3,6 @@ import numeral from 'numeral'
 
 
 
-numeral.register('locale', 'en', {
-  delimiters: {
-    thousands: ',',
-    decimal: '.'
-  },
-  abbreviations: {
-    thousand: 'thousand',
-    million: 'million',
-    billion: 'billion',
-    trillion: 'trillion'
-  },
-  ordinal: function () {
-    return 'º'
-  },
-  currency: {
-    symbol: '€'
-  }
-})
-
 
 export default function (value, locale) {
   numeral.locale(locale)
