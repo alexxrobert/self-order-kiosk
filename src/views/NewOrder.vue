@@ -13,7 +13,7 @@
                   <span class="flag-icon flag-icon-br"></span>
                 </button>
                 <button type="button" class="btn btn-flag" @click="changeLocale('en')">
-                  <span class="flag-icon flag-icon-us"></span>
+                  <span class="flag-icon flag-icon-css-us"></span>
                 </button>
               </div>
       </div>
