@@ -1,6 +1,6 @@
 <template>
   <SlideTransition :direction="getRouteDirection">
-    <SafeArea :class="`app theme-${session.theme}`" v-if="session.started" @click="newOrder">
+    <SafeArea :class="`app theme-${session.theme}`" v-if="session.started" >
       <div class="app-header d-none d-lg-flex">
         <h1 class="m-auto font-weight-bold">
           {{ $t('order_here') }}
@@ -19,7 +19,7 @@
       </div>
      
       <div class="app-footer bg-primary p-3 p-md-5">
-        <span class="text-uppercase m-auto">
+        <span class="text-uppercase m-auto" @click="newOrder">
           {{ $t('start_button') }}
         </span>
       </div>
