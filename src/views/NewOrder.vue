@@ -13,7 +13,7 @@
                   <span class="flag-icon flag-icon-br"></span>
                 </button>
                 <button type="button" class="btn btn-flag" @click="changeLocale('en')">
-                  <span class="flag-icon flag-icon-css-us"></span>
+                  <VectorFlagUS>
                 </button>
               </div>
       </div>
@@ -29,6 +29,8 @@
 
 <script>
 import { Order } from '@/models'
+import VectorFlagBR from '/vectors/VectorFlagBR'
+import VectorFlagUS from '/vectors/VectorFlagUS'
 
 export default {
   name: 'newOrder',
