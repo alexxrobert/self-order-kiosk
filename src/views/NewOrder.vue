@@ -8,8 +8,7 @@
       </div>
       <div class="app-content">
         <Logo class="m-auto"/>
-      </div>
-      <div class="text-center">
+         <div class="text-center">
                 <button type="button" class="btn btn-flag" @click="changeLocale('es')">
                   <span class="flag-icon flag-icon-br"></span>
                 </button>
@@ -17,6 +16,8 @@
                   <span class="flag-icon flag-icon-us"></span>
                 </button>
               </div>
+      </div>
+     
       <div class="app-footer bg-primary p-3 p-md-5">
         <span class="text-uppercase m-auto">
           {{ $t('start_button') }}
