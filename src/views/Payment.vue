@@ -9,6 +9,7 @@
       </div>
       <div class="app-content">
         <div class="px-3">
+         {{ $t('tammount-text') }} <Currency :amount="session.order.total()" class="text-primary font-weight-bold"/>
           <p class="text-center mb-4">
             <FontAwesome :icon="['far', 'smile']" size="4x"/>
           </p>
@@ -54,13 +55,15 @@ export default {
     "title": "Pago en efectivo",
     "thank_you": "Gracias",
     "instructions": "Tome su ticket despues de pagar",
-    "exit": "Salir"
+    "exit": "Salir",
+    "ammount-text": "Importe total"
   },
   "en": {
     "title": "Payment by cash",
     "thank_you": "Thank you!",
     "instructions": "Take your ticket when payment is finished",
-    "exit": "Exit"
+    "exit": "Exit",
+    "ammount-text": "Total ammount"
   }
 }
 </i18n>
