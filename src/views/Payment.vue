@@ -1,7 +1,7 @@
 <template>
   <SlideTransition :direction="getRouteDirection">
     <SafeArea :class="`app theme-${session.theme}`" v-if="session.started">
-      <IdleTime :seconds="30"/>
+      <IdleTime :seconds="300"/>
       <div class="app-header">
         <div class="m-auto">
           {{ $t('title') }}
