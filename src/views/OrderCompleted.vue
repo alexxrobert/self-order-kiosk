@@ -50,7 +50,7 @@ export default {
 
 <i18n>
 {
-  "br": {
+  "es": {
     "title": "Oba! Seu pedido foi feito.",
     "thank_you": "Obrigado!",
     "instructions": "Te chamaremos pelo nome assim que terminarmos de preparar.",
