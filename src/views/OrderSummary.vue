@@ -62,6 +62,7 @@ export default {
     },
     complete() {
       this.$router.push({ name: 'orderCompleted' })
+      this.$router.push({ name: 'payment' })
     },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
