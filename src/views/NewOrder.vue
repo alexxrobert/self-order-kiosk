@@ -31,7 +31,7 @@
 import { Order } from '@/models'
 import VectorFlagBR from '../vectors/VectorFlagBR'
 import VectorFlagUS from '../vectors/VectorFlagUS'
-import VectorFlagUS from '../vectors/VectorLogo'
+import VectorLogo from '../vectors/VectorLogo'
 
 export default {
   name: 'newOrder',
