@@ -7,7 +7,7 @@
         </h1>
       </div>
       <div class="app-content">
-        <Logo class="m-auto"/>
+         <VectorLogo/>
          <div class="text-center">
                 <button type="button" class="btn btn-flag" @click="changeLocale('es')">
                       <VectorFlagBR/>
@@ -31,6 +31,7 @@
 import { Order } from '@/models'
 import VectorFlagBR from '../vectors/VectorFlagBR'
 import VectorFlagUS from '../vectors/VectorFlagUS'
+import VectorFlagUS from '../vectors/VectorLogo'
 
 export default {
   name: 'newOrder',
