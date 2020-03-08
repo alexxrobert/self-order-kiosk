@@ -9,7 +9,9 @@
       </div>
       <div class="app-content">
         <div class="px-3">
-         {{ $t('tammount-text') }} <Currency :amount="session.order.total()" class="text-primary font-weight-bold"/>
+        <div class="text-center mb-4 font-weight-bold">
+         {{ $t('ammount-text') }} <Currency :amount="session.order.total()" class="text-primary font-weight-bold"/>
+         </div>
           <p class="text-center mb-4">
             <FontAwesome :icon="['far', 'smile']" size="4x"/>
           </p>
