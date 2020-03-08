@@ -36,7 +36,7 @@ import VectorLogo from '../vectors/VectorLogo'
 export default {
   name: 'newOrder',
    components: {
-    VectorFlagUS, VectorFlagBR
+    VectorFlagUS, VectorFlagBR, VectorLogo
   },
   async mounted() {
   this.$api.virtualPath = "burger-place"
