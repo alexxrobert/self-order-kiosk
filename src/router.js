@@ -66,22 +66,17 @@ export default new Router({
       meta: { step: 5 }
     },
     {
-      path: '/eat-location',
-      name: 'eatLocation',
-      component: EatLocation,
+      path: '/payment',
+      name: 'payment',
+      component: Payment,
       meta: { step: 6 }
     },
-    {
-      path: '/who',
-      name: 'whoIAm',
-      component: WhoIAm,
-      meta: { step: 7 }
-    },
+   
     {
       path: '/cancel-order',
       name: 'cancelOrder',
       component: CancelOrder,
-      meta: { step: 8 }
+      meta: { step: 7 }
     },
     {
       path: '/order-completed',
