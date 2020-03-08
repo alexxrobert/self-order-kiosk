@@ -61,7 +61,7 @@ export default {
       this.$router.push({ name: 'cancelOrder' })
     },
     complete() {
-      this.$router.push({ name: 'eatLocation' })
+      this.$router.push({ name: 'orderCompleted' })
     },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
