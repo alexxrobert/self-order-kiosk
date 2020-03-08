@@ -10,6 +10,7 @@ import WhoIAm from './views/WhoIAm.vue'
 import Start from './views/Start.vue'
 import NewOrder from './views/NewOrder.vue'
 import OrderCompleted from './views/OrderCompleted.vue'
+import Payment from './views/Payment.vue'
 import OrderSummary from './views/OrderSummary.vue'
 import UpdateAvailable from './views/UpdateAvailable.vue'
 
