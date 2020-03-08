@@ -51,16 +51,16 @@ export default {
 <i18n>
 {
   "es": {
-    "title": "Oba! Seu pedido foi feito.",
-    "thank_you": "Obrigado!",
-    "instructions": "Te chamaremos pelo nome assim que terminarmos de preparar.",
-    "exit": "Encerrar"
+    "title": "Pago en efectivo",
+    "thank_you": "Gracias",
+    "instructions": "Tome su ticket despues de pagar",
+    "exit": "Salir"
   },
   "en": {
-    "title": "Yay! Your order has been done.",
+    "title": "Payment by cash",
     "thank_you": "Thank you!",
-    "instructions": "We'll call you by name as soon as we finish cooking.",
-    "exit": "Close"
+    "instructions": "Take your ticket when payment is finished",
+    "exit": "Exit"
   }
 }
 </i18n>
