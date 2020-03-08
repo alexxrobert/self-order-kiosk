@@ -22,7 +22,7 @@
       </button>
       <span style="text-align: left; font-weight: bold; margin-left: 1.5rem;">{{ item.name }}
       </span>
-      <span style="text-align: left; max-width: 930px; margin-left: 2rem;">{{ options }}</span>
+      <span style="text-align: left; max-width: 910px; margin-left: 2rem;">{{ options }}</span>
       <div class="text-right font-weight-bold ml-auto">
         <Currency2 :amount="item.total()"/> 
         
