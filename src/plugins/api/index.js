@@ -43,6 +43,7 @@ class Api {
     this.optionGroups.virtualPath = this._virtualPath
     this.options.virtualPath = this._virtualPath
     this.settings.virtualPath = this._virtualPath
+    this.payment.virtualPath = this._virtualPath
   }
 
   get token() {
