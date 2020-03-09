@@ -51,8 +51,8 @@ export default {
   },
   methods: {
    parsedata(){
-    //var moc = this.session.order.total();
-    var moc = this.Paymentdata.length;
+    var moc = this.session.order.total();
+    //var moc = this.Paymentdata.length;
       //alert(moc);
       setTimeout(function(){alert(moc); }, 5000);
     },
