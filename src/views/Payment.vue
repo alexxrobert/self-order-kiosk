@@ -43,6 +43,10 @@ export default {
     }
   },
   methods: {
+   parsedata(){
+    var moc = this.session.order.total();
+      alert(moc);
+    },
     exit() {
       this.$router.push({ name: 'newOrder' })
     },
