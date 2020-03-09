@@ -41,6 +41,7 @@ export default {
     if (!this.session.started) {
       this.restart()
     }
+    parsedata()
   },
   methods: {
    parsedata(){
