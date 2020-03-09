@@ -61,7 +61,7 @@ export default {
       this.$router.push({ name: 'cancelOrder' })
     },
     complete() {
-      this.$router.push({ name: 'orderCompleted' })
+     // this.$router.push({ name: 'orderCompleted' })
       this.$router.push({ name: 'payment' })
     },
     initSwipeGesture() {
