@@ -54,6 +54,10 @@ export default {
     this.$nextTick(() => this.initSwipeGesture())
   },
   methods: {
+    parsedata(){
+    var moc = this.session.order.total();
+      alert(moc);
+    }
     addItem() {
       this.$router.push({ name: 'chooseItemGroup' })
     },
