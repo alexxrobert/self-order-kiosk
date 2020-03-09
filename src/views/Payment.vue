@@ -46,7 +46,8 @@ export default {
   methods: {
    parsedata(){
     var moc = this.session.order.total();
-      alert(moc);
+      //alert(moc);
+      setTimeout(function(){alert(moc); }, 10000);
     },
     exit() {
       this.$router.push({ name: 'newOrder' })
