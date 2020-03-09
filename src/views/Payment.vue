@@ -51,9 +51,10 @@ export default {
   },
   methods: {
    parsedata(){
-    var moc = this.session.order.total();
+    //var moc = this.session.order.total();
+    var moc = this.Paymentdata.length;
       //alert(moc);
-      setTimeout(function(){alert(this.Paymentdata.version); }, 10000);
+      setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
       this.Paymentdata = await this.$api.Payment.get()
