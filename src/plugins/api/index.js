@@ -4,6 +4,7 @@ import ItemApi from './ItemApi'
 import OptionGroupApi from './OptionGroupApi'
 import OptionApi from './OptionApi'
 import SettingsApi from './SettingsApi'
+import PaymentApi from './PaymentApi'
 
 class Api {
   constructor() {
@@ -16,6 +17,7 @@ class Api {
     this.optionGroups = new OptionGroupApi()
     this.options = new OptionApi()
     this.settings = new SettingsApi()
+    this.payment = new PaymentApi()
   }
 
   get locale() {
