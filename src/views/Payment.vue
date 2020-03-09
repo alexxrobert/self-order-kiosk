@@ -37,17 +37,26 @@
 <script>
 export default {
   name: 'payment',
+  data() {
+    return {
+      Paymentdata: []
+    }
+  },
   mounted() {
     if (!this.session.started) {
       this.restart()
     }
+    await this.getPaymentdata()
     this.parsedata()
   },
   methods: {
    parsedata(){
     var moc = this.session.order.total();
       //alert(moc);
-      setTimeout(function(){alert(moc); }, 10000);
+      setTimeout(function(){alert(this.Paymentdata.version); }, 10000);
+    },
+    async getPaymentdata() {
+      this.Paymentdata = await this.$api.Payment.get()
     },
     exit() {
       this.$router.push({ name: 'newOrder' })
