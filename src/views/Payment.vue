@@ -39,7 +39,7 @@ export default {
   name: 'payment',
   data() {
     return {
-      Paymentdata: []
+      payment: []
     }
   },
   async mounted() {
@@ -47,18 +47,19 @@ export default {
       this.restart()
     }
     await this.getPaymentdata()
-    this.parsedata()
-    //await this.$api.Payment.get()
+    this.$nextTick(() => this.parsedata())
+    //this.parsedata()
+    //await this.$api.payment.get()
   },
   methods: {
    parsedata(){
     //var moc = this.session.order.total();
-    var moc = this.Paymentdata.length;
-      //alert(moc);
-      setTimeout(function(){alert(moc); }, 5000);
+    var moc = this.payment.length;
+      alert(moc);
+      //setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
-    this.Paymentdata = await this.$api.payment.get()
+    this.payment = await this.$api.payment.get()
     //let authx = null
     //authx = await this.$api.Payment.get()
     //return true
