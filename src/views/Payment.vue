@@ -42,14 +42,14 @@ export default {
       payment: []
     }
   },
-   mounted() {
+   async mounted() {
     if (!this.session.started) {
       this.restart()
     }
     //await this.getPaymentdata()
     //this.$nextTick(() => this.parsedata())
     //this.parsedata()
-    const ppp = this.$api.payment.get()
+    const ppp = await this.$api.payment.get()
     //this.parsedata(ppp.version)
     console.log(ppp.version);
   },
