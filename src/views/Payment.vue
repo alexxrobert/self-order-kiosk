@@ -50,7 +50,8 @@ export default {
     //this.$nextTick(() => this.parsedata())
     //this.parsedata()
     const ppp = await this.$api.payment.get()
-    this.parsedata(ppp.version)
+    //this.parsedata(ppp.version)
+    console.log(ppp.version);
   },
   methods: {
    parsedata(moc){
