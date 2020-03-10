@@ -46,15 +46,16 @@ export default {
     if (!this.session.started) {
       this.restart()
     }
-    await this.getPaymentdata()
-    this.$nextTick(() => this.parsedata())
+    //await this.getPaymentdata()
+    //this.$nextTick(() => this.parsedata())
     //this.parsedata()
-    //await this.$api.payment.get()
+    const ppp = await this.$api.payment.get()
+    this.parsedata(ppp.version)
   },
   methods: {
-   parsedata(){
+   parsedata(moc){
     //var moc = this.session.order.total();
-    var moc = this.payment.length;
+    //var moc = this.payment.length;
       alert(moc);
       //setTimeout(function(){alert(moc); }, 5000);
     },
