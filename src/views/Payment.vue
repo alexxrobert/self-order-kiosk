@@ -46,22 +46,22 @@ export default {
     if (!this.session.started) {
       this.restart()
     }
-    //await this.getPaymentdata()
-    //this.parsedata()
-    await this.$api.Payment.get()
+    await this.getPaymentdata()
+    this.parsedata()
+    //await this.$api.Payment.get()
   },
   methods: {
    parsedata(){
-    var moc = this.session.order.total();
-    //var moc = this.Paymentdata.length;
+    //var moc = this.session.order.total();
+    var moc = this.Paymentdata.length;
       //alert(moc);
       setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
-    //this.Paymentdata = await this.$api.Payment.get()
-    let authx = null
-    authx = await this.$api.Payment.get()
-    return true
+    this.Paymentdata = await this.$api.payment.get()
+    //let authx = null
+    //authx = await this.$api.Payment.get()
+    //return true
     },
     exit() {
       this.$router.push({ name: 'newOrder' })
