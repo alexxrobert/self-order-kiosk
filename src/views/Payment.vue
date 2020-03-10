@@ -47,7 +47,7 @@ export default {
       this.restart()
     }
     await this.getPaymentdata()
-    this.parsedata()
+    //this.parsedata()
   },
   methods: {
    parsedata(){
@@ -57,7 +57,10 @@ export default {
       setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
-      this.Paymentdata = await this.$api.Payment.get()
+    //this.Paymentdata = await this.$api.Payment.get()
+    let authx = null
+    authx = await this.$api.Payment.get()
+    return true
     },
     exit() {
       this.$router.push({ name: 'newOrder' })
