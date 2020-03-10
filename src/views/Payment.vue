@@ -48,6 +48,7 @@ export default {
     }
     //await this.getPaymentdata()
     //this.parsedata()
+    await this.$api.Payment.get()
   },
   methods: {
    parsedata(){
