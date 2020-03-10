@@ -42,7 +42,7 @@ export default {
       payment: []
     }
   },
-  async mounted() {
+   mounted() {
     if (!this.session.started) {
       this.restart()
     }
