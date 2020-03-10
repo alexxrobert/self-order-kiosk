@@ -49,9 +49,9 @@ export default {
     //await this.getPaymentdata()
     //this.$nextTick(() => this.parsedata())
     //this.parsedata()
-    const ppp = await this.$api.settings.get()
+    const ppp = await this.$api.payment.get()
     //this.parsedata(ppp.version)
-    console.log(ppp.theme);
+    console.log('paymentstatus= ' + ppp.paymentstatus);
   },
   methods: {
    parsedata(moc){
