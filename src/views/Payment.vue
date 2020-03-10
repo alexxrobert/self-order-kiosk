@@ -51,7 +51,9 @@ export default {
     //this.parsedata()
     const ppp = await this.$api.payment.get()
     //this.parsedata(ppp.version)
-    console.log('paymentstatus= ' + ppp.paymentstatus);
+    let rrr = JSON.stringify(ppp)
+    //console.log('paymentstatus= ' + ppp.paymentstatus);
+    console.log(rrr)
   },
   methods: {
    parsedata(moc){
