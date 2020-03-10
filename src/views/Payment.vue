@@ -46,7 +46,7 @@ export default {
     if (!this.session.started) {
       this.restart()
     }
-    await this.getPaymentdata()
+    //await this.getPaymentdata()
     //this.parsedata()
   },
   methods: {
