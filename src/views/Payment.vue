@@ -49,7 +49,7 @@ export default {
     //await this.getPaymentdata()
     //this.$nextTick(() => this.parsedata())
     //this.parsedata()
-    const ppp = await this.$api.payment.get()
+    const ppp = await this.$api.settings.get()
     //this.parsedata(ppp.version)
     console.log(ppp.version);
   },
