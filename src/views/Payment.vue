@@ -51,7 +51,7 @@ export default {
     //this.parsedata()
     const ppp = await this.$api.settings.get()
     //this.parsedata(ppp.version)
-    console.log(ppp.version);
+    console.log(ppp.theme);
   },
   methods: {
    parsedata(moc){
