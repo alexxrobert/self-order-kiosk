@@ -3,7 +3,11 @@
     <SafeArea :class="`app theme-${session.theme}`" v-if="session.started">
       <IdleTime :seconds="300"/>
       <div class="app-header">
+      
         <div class="m-auto">
+         <span style="align-left">
+         <img src="img/kiosk_logo.png" style="height:42px">
+         </span>
           {{ $t('title') }}
         </div>
       </div>
