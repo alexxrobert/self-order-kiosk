@@ -2,6 +2,9 @@
   <SlideTransition :direction="getRouteDirection">
     <SafeArea :class="`app theme-${session.theme}`" v-if="session.started">
       <IdleTime/>
+       <div style="position:fixed; float:left;margin-left:10px; margin-top:10px;"> 
+     <img src="img/kiosk_logo.png" style="height: 72px;opacity: 0.8">
+     </div>
       <div class="app-header">
         <div class="m-auto">
           {{ title }}
