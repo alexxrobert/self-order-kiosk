@@ -1,8 +1,10 @@
 <template>
-<img src="img/kiosk_logo.png" style="width:42px; position:fixed; float:left"/>
   <SlideTransition :direction="getRouteDirection">
     <SafeArea :class="`app theme-${session.theme}`" v-if="session.started">
       <IdleTime :seconds="300"/>
+     <div style="position:fixed; float:left"> <img src="img/kiosk_logo.png" style="height:42px;">
+     </div>
+
       <div class="app-header">
       
         <div class="m-auto">
