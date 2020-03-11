@@ -2,6 +2,9 @@
   <SlideTransition :direction="getRouteDirection">
     <SafeArea :class="`app theme-${session.theme}`" v-if="session.started">
       <IdleTime/>
+       <div style="position:fixed; float:left;margin-left:10px; margin-top:10px;"> 
+     <img src="img/kiosk_logo.png" style="height: 72px;opacity: 0.8">
+     </div>
       <div class="app-content">
         <p class="text-center text-primary mb-4">
           <FontAwesome icon="times-circle" size="4x"/><br>
@@ -63,7 +66,7 @@ export default {
     "cancel_order": "¿Cancelar pedido?",
     "warning": "Su pedido será cancelado. Todos los datos serán borrados ",
     "no": "No, sigo con el pedido",
-    "yes": "Si, cancele el pedido"
+    "yes": "Si, cancela el pedido"
   },
   "en": {
     "cancel_order": "Cancel order?",
