@@ -13,7 +13,7 @@
          {{ $t('ammount-text') }} <Currency :amount="session.order.total()" class="text-primary font-weight-bold"/>
          </div>
           <p class="text-center mb-4">
-           <img src="img/gif_pay_white" />
+           <img src="img/gif_pay_white.gif" />
           </p>
           <h3 class="text-center mb-4">
             {{ $t('thank_you') }}
