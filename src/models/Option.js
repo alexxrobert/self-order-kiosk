@@ -3,6 +3,6 @@ export default class Option {
     this.id = params.id || ''
     this.name = params.name || ''
     this.price = params.price || 0
-    this.checked = false
+    this.checked = params.price || false
   }
 }
