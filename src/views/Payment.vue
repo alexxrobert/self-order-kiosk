@@ -48,7 +48,7 @@ export default {
   name: 'payment',
   data() {
     return {
-      payment: [],
+      payment: {paymentstatus:"sent", totalpaid: "0"},
       polling: null
     }
   },
@@ -105,7 +105,7 @@ export default {
     return false
     },
     hayDinero(){
-    	 if (this.payment.totalpaid !== '0' & this.payment.totalpaid !== '' & this.payment.totalpaid){
+    	 if (this.payment.totalpaid !== '0' & this.payment.totalpaid !== ''){
     	return true
 	}
     return false
