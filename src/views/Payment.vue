@@ -100,12 +100,16 @@ export default {
   computed: {
   	isPaymentdone(){
     if (this.payment.paymentstatus === 'finished'){
+        clearInterval(this.polling)
+	setTimeout(function(){this.exit(); }, 10000);
     	return true
+	
 	}
     return false
     },
     hayDinero(){
     	 if (this.payment.totalpaid !== '0' & this.payment.totalpaid !== ''){
+	 
     	return true
 	}
     return false
