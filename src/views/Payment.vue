@@ -86,12 +86,7 @@ export default {
     //authx = await this.$api.Payment.get()
     //return true
     },
-    isPaymentdone(){
-    if (this.payment.paymentstatus === 'finished'){
-    	return true
-	}
-    return false
-    },
+    
     exit() {
       this.$router.push({ name: 'newOrder' })
     },
@@ -99,9 +94,19 @@ export default {
       this.$router.push({ name: 'start' })
     }
   },
+  computed: {
+  	isPaymentdone(){
+    if (this.payment.paymentstatus === 'finished'){
+    	return true
+	}
+    return false
+    }
+  }
+  ,
   beforeDestroy () {
 	clearInterval(this.polling)
 }
+
 }
 </script>
 
