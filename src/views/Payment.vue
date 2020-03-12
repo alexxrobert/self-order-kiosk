@@ -89,7 +89,7 @@ export default {
     isPaymentdone(){
     if (this.payment.paymentstatus==='finished')
     return true
-    }
+    },
     exit() {
       this.$router.push({ name: 'newOrder' })
     },
