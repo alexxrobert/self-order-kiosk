@@ -19,17 +19,21 @@
           <p class="text-center mb-4">
            <img src="img/gif_pay_white.gif" />
           </p>
-          <h3 class="text-center mb-4">
-            {{ $t('thank_you') }}
-          </h3>
+          <h3 class="text-center mb-4" v-if="isPaymentdone">
+            {{ $t('thank_you') }}</h3>
+	  <h3 class="text-center mb-4" v-else>
+            {{ $t('wait') }}</h3>  
           <p class="text-center">
             {{ $t('instructions') }}
           </p>
         </div>
       </div>
       <div class="app-footer">
-        <button type="button" class="btn btn-primary mx-auto" @click="exit">
+        <button type="button" class="btn btn-primary mx-auto" @click="exit" v-if="isPaymentdone">
           {{ $t('exit') }}
+        </button>
+	<button type="button" class="btn btn-primary mx-auto" @click="exit" v-else>
+          {{ $t('cancel') }}
         </button>
       </div>
     </SafeArea>
@@ -82,6 +86,10 @@ export default {
     //authx = await this.$api.Payment.get()
     //return true
     },
+    isPaymentdone(){
+    if (this.payment.paymentstatus==='finished')
+    return true
+    }
     exit() {
       this.$router.push({ name: 'newOrder' })
     },
@@ -100,15 +108,19 @@ export default {
   "es": {
     "title": "Pago en efectivo",
     "thank_you": "Gracias",
+    "wait": "Por favor, use la maquina de abajo para pagar",
     "instructions": "Tome su ticket despues de pagar",
     "exit": "Salir",
+    "cancel": "Cancelar pedido",
     "ammount-text": "Importe total"
   },
   "en": {
     "title": "Payment by cash",
     "thank_you": "Thank you!",
+    "wait": "Please pay using the machine below",
     "instructions": "Take your ticket when payment is finished",
     "exit": "Exit",
+    "cancel": "Cancel order",
     "ammount-text": "Total ammount"
   }
 }
