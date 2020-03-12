@@ -52,6 +52,7 @@ export default {
     //await this.getPaymentdata()
     //this.$nextTick(() => this.parsedata())
     //this.parsedata()
+    this.session.order.total = this.session.order.total()
     const ppp = await this.$api.payment.get(this.session.order.total())
     //this.parsedata(ppp.version)
     let rrr = JSON.stringify(ppp)
