@@ -72,7 +72,7 @@ export default {
       //setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
-    this.payment = await this.$api.payment.get(this.session.order.total())
+    this.payment = await this.$api.payment.get(this.session.order)
     console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount)
     let vvv = JSON.stringify(this.session.order)
     console.log(vvv)
