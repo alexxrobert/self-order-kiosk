@@ -57,8 +57,14 @@ export default {
     let rrr = JSON.stringify(ppp)
     //console.log('paymentstatus= ' + ppp.paymentstatus);
     console.log(rrr)
+    this.pollData()
   },
   methods: {
+   pollData () {
+		this.polling = setInterval(() => {
+		 this.payment = this.$api.payment.get(this.session.order.total())
+		}, 3000)
+	},
    parsedata(moc){
     //var moc = this.session.order.total();
     //var moc = this.payment.length;
@@ -77,7 +83,10 @@ export default {
     restart() {
       this.$router.push({ name: 'start' })
     }
-  }
+  },
+  beforeDestroy () {
+	clearInterval(this.polling)
+}
 }
 </script>
 
