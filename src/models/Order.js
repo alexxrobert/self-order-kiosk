@@ -5,7 +5,7 @@ export default class Order {
     this.mobile = ''
     this.takeOut = false
     this.items = []
-    this.total = 0
+    this.totale = 0
   }
 
   add(item) {
