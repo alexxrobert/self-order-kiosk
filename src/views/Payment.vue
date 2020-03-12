@@ -16,6 +16,9 @@
         <div class="text-center mb-4 font-weight-bold">
          {{ $t('ammount-text') }} <Currency :amount="session.order.total()" class="text-primary font-weight-bold"/>
          </div>
+	  <div class="text-center mb-4 font-weight-bold" v-if="hayDinero">
+	{{ $t('ammount-paid') }}<Currency :amount="payment.totalpaid" class="font-weight-bold"/>
+	 </div>
           <p class="text-center mb-4">
            <img src="img/gif_pay_white.gif" />
           </p>
@@ -100,6 +103,13 @@ export default {
     	return true
 	}
     return false
+    },
+    hayDinero(){
+    	 if (this.payment.totalpaid !== '0' || this.payment.totalpaid !== ''){
+    	return true
+	}
+    return false
+    
     }
   }
   ,
@@ -119,7 +129,8 @@ export default {
     "instructions": "Tome su ticket despues de pagar",
     "exit": "Salir",
     "cancel": "Cancelar pedido",
-    "ammount-text": "Importe total"
+    "ammount-text": "Importe total",
+    "ammount-paid": "Importe introducido"
   },
   "en": {
     "title": "Payment by cash",
@@ -128,7 +139,8 @@ export default {
     "instructions": "Take your ticket when payment is finished",
     "exit": "Exit",
     "cancel": "Cancel order",
-    "ammount-text": "Total ammount"
+    "ammount-text": "Total ammount",
+    "ammount-paid": "Money paid"
   }
 }
 </i18n>
