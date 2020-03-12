@@ -101,7 +101,7 @@ export default {
   	isPaymentdone(){
     if (this.payment.paymentstatus === 'finished'){
         clearInterval(this.polling)
-	setTimeout(function(){this.$router.push({ name: 'newOrder' }); }, 10000);
+	setTimeout(()=>{ this.exit(); }, 10000)
     	return true
 	
 	}
