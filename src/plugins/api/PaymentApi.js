@@ -9,7 +9,7 @@ export default class PaymentApi {
   async get(amm) {
     const path = `${process.env.VUE_APP_API_BASE_URL}${this.virtualPath}/p.php`
     //const response = await axios.post(path,{'ammount':amm})
-    const response = await axios.post(path,this.session.order)
+    const response = await axios.post(path,amm)
     if (response && response.status === 200) {
       return new Payment(response.data)
     }
