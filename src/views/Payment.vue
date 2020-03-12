@@ -74,6 +74,8 @@ export default {
     async getPaymentdata() {
     this.payment = await this.$api.payment.get(this.session.order.total())
     console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount)
+    let vvv = JSON.stringify(this.session.order)
+    console.log(vvv)
     //let authx = null
     //authx = await this.$api.Payment.get()
     //return true
