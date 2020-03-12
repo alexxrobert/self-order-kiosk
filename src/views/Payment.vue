@@ -87,8 +87,8 @@ export default {
     //return true
     },
     isPaymentdone(){
-    if (this.payment.paymentstatus==='finished')
-    return true
+    if (this.payment.paymentstatus==='finished')vreturn true
+    return false
     },
     exit() {
       this.$router.push({ name: 'newOrder' })
