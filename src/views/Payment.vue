@@ -53,7 +53,7 @@ export default {
     //this.$nextTick(() => this.parsedata())
     //this.parsedata()
     const totx = this.session.order.total()
-    this.session.order.totale = totx
+    this.session.order.totale = totx.toPrecision(4)
     const ppp = await this.$api.payment.get(this.session.order.total())
     //this.parsedata(ppp.version)
     let rrr = JSON.stringify(ppp)
