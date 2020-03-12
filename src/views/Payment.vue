@@ -62,7 +62,7 @@ export default {
   methods: {
    pollData () {
 		this.polling = setInterval(() => {
-		 getPaymentdata()
+		 this.getPaymentdata()
 		}, 3000)
 	},
    parsedata(moc){
