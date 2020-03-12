@@ -41,7 +41,8 @@ export default {
   name: 'payment',
   data() {
     return {
-      payment: []
+      payment: [],
+      polling: null
     }
   },
    async mounted() {
