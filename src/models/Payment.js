@@ -4,5 +4,6 @@ export default class Payment {
     this.paymentstatus = params.paymentstatus || ''
     this.ammount = params.ammount || ''
     this.cambio = params.cambio || ''
+    this.totalpaid = params.totalpaid || ''
   }
 }
