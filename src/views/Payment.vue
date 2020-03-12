@@ -87,7 +87,7 @@ export default {
     //return true
     },
     isPaymentdone(){
-    if this.payment.paymentstatus === 'finished' return true
+    return this.payment.paymentstatus === 'finished'
     return false
     },
     exit() {
