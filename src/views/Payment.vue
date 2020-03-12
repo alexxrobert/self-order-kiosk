@@ -62,7 +62,7 @@ export default {
   methods: {
    pollData () {
 		this.polling = setInterval(() => {
-		 this.payment = this.$api.payment.get(this.session.order.total())
+		 getPaymentdata()
 		}, 3000)
 	},
    parsedata(moc){
@@ -72,7 +72,8 @@ export default {
       //setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
-    this.payment = await this.$api.payment.get()
+    this.payment = await this.$api.payment.get(this.session.order.total())
+    console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount)
     //let authx = null
     //authx = await this.$api.Payment.get()
     //return true
