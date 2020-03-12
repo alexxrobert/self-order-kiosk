@@ -105,7 +105,7 @@ export default {
     return false
     },
     hayDinero(){
-    	 if (this.payment.totalpaid !== '0' || this.payment.totalpaid !== ''){
+    	 if (this.payment.totalpaid !== '0' & this.payment.totalpaid !== ''){
     	return true
 	}
     return false
