@@ -14,7 +14,7 @@
         <div class="d-block" >
           <div ref="swiper" >
             <div class="swiper-wrapper" >
-              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId">
+              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId" v-if="!item.takeout">
                 <ItemButton ref="itemButton" :item="item" @click="select(item)" @imagePreload="loadImages"/>
               </div>
             </div>
