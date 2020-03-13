@@ -14,7 +14,7 @@
         <div class="d-block" >
           <div ref="swiper" >
             <div class="swiper-wrapper" >
-              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId" v-if="istakeout">
+              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId" v-if="!item.takeout">
                 <ItemButton ref="itemButton" :item="item" @click="select(item)" @imagePreload="loadImages"/>
               </div>
             </div>
@@ -54,10 +54,7 @@ export default {
     async listItems() {
       this.session.itemGroup.items = await this.$api.items.list(this.session.itemGroup.id)
     },
-    istakeout(itm){
-    console.log('ITM-takeout=' + itm.takeout)
-    return true
-    },
+    
     back() {
       this.$router.push({ name: 'chooseItemGroup' })
     },
