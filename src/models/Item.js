@@ -3,6 +3,7 @@ export default class Item {
     this.id = params.id || ''
     this.name = params.name || ''
     this.price = params.price || 0
+    this.takeout = params.takeout || false
     this.quantity = 1
     this.optionGroups = null
   }
