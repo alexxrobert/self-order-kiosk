@@ -57,7 +57,7 @@ export default {
     istakeout(itm){
     console.log('ITM-takeout=' + itm.takeout)
     return true
-    }
+    },
     back() {
       this.$router.push({ name: 'chooseItemGroup' })
     },
