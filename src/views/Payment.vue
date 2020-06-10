@@ -103,8 +103,8 @@ export default {
         clearInterval(this.polling)
 	setTimeout(()=>{ this.exit(); }, 10000)
     	return true
-	
 	}
+    console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount + this.payment.opid)
     return false
     },
     hayDinero(){
