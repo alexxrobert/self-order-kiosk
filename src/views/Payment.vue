@@ -82,6 +82,7 @@ export default {
     },
     async getPaymentdata() {
     this.payment = await this.$api.payment.get(this.session.order)
+    this.session.order.opid = this.payment.opid
     console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount)
     let vvv = JSON.stringify(this.session.order)
     console.log(vvv)
