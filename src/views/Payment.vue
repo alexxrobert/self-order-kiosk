@@ -92,6 +92,8 @@ export default {
     },
     
     exit() {
+      this.session.order.tocancel = 1
+      this.$api.payment.get(this.session.order)
       this.$router.push({ name: 'newOrder' })
     },
     restart() {
