@@ -7,6 +7,7 @@ export default class Order {
     this.items = []
     this.totale = 0
     this.opid = 0
+    this.tocancel = 0
   }
 
   add(item) {
