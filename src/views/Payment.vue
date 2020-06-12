@@ -98,6 +98,9 @@ export default {
     },
     restart() {
       this.$router.push({ name: 'start' })
+    },
+     finishorder() {
+      this.$router.push({ name: 'start' })
     }
   },
   computed: {
