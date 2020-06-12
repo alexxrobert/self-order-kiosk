@@ -100,7 +100,7 @@ export default {
       this.$router.push({ name: 'start' })
     },
      finishorder() {
-      this.$router.push({ name: 'OrderCompleted' })
+      this.$router.push({ name: 'orderCompleted' })
     }
   },
   computed: {
