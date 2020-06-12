@@ -100,14 +100,15 @@ export default {
       this.$router.push({ name: 'start' })
     },
      finishorder() {
-      this.$router.push({ name: 'start' })
+      this.$router.push({ name: 'OrderCompleted' })
     }
   },
   computed: {
   	isPaymentdone(){
     if (this.payment.paymentstatus === 'finished'){
         clearInterval(this.polling)
-	setTimeout(()=>{ this.exit(); }, 10000)
+	//setTimeout(()=>{ this.exit(); }, 10000)
+	setTimeout(()=>{ finishorder(); }, 5000)
     	return true
 	}
     console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount + this.payment.opid)
