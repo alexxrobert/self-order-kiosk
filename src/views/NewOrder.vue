@@ -10,6 +10,10 @@
         </h1>
       </div>
       <div class="app-content">
+      <div style="overflow: hidden; opacity:30"><img src="/img/tabaco18.jpg" style="position: absolute; top: 190px; left: 10px">
+        <p style="position: absolute; top: 390px; left: 10px"></p>
+      </div>
+      
          <VectorLogo/>
          <div class="text-center">
                 <button type="button" class="btn btn-flag" @click="changeLocale('es')">
