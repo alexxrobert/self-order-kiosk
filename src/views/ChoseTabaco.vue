@@ -46,7 +46,8 @@ export default {
       this.restart()
       return
     }
-    await this.listItemGroups()
+    this.session.itemGroup = 9
+   // await this.listItemGroups()
     await this.listItems()
     this.$nextTick(() => this.initSwipeGesture())
   },
@@ -54,12 +55,13 @@ export default {
     async listItems() {
       //this.session.itemGroup = 9
       this.session.itemGroup.items = await this.$api.tabaco.list(1)
-    },
-            {
-     async listItemGroups() {
-      this.tabacoGroups = await this.$api.tabacoGroups.list()       
+    }
+    ,
+      //      {
+     //async listItemGroups() {
+     // this.tabacoGroups = await this.$api.tabacoGroups.list()       
             
-    },        
+   // },        
     
     back() {
       this.$router.push({ name: 'newOrder' })
