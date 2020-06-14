@@ -67,6 +67,10 @@ export default {
       return
       this.$router.push({ name: 'newOrder' })
     },
+    newTabaco() {
+      this.session.order = new Order()
+      this.$router.push({ name: 'chooseTabaco' })
+    },
     newOrder() {
       this.session.order = new Order()
       //this.$router.push({ name: 'chooseItemGroup' })
