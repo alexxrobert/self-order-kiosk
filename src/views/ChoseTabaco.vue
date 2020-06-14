@@ -7,7 +7,7 @@
      </div>
       <div class="app-header">
         <div class="m-auto">
-          {{ session.itemGroup.name }}
+          {{ $t('title') }}
         </div>
       </div>
       <div class="app-content">
@@ -118,11 +118,13 @@ export default {
 {
   "es": {
     "back": "Atrás",
-    "tap_to_select": "Toque para selecionar"
+    "tap_to_select": "Toque para selecionar",
+    "title": "Elige el tabaco tocando la foto"
   },
   "en": {
     "back": "Back",
-    "tap_to_select": "Tap to select"
+    "tap_to_select": "Tap to select",
+    "title": "Click to buy cigarettes"
   }
 }
 </i18n>
