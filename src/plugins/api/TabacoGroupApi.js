@@ -18,4 +18,3 @@ export default class TabacoGroupApi {
     return null
   }
 }
-© 2020 GitHub, In
