@@ -37,7 +37,7 @@ import ItemButton from './partials/ItemButton'
 import breakpoints from '@/constants/breakpoints'
 
 export default {
-  name: 'chooseItem',
+  name: 'chooseTabaco',
   components: {
     ItemButton
   },
