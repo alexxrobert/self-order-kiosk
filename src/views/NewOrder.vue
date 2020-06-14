@@ -69,7 +69,7 @@ export default {
     },
     newTabaco() {
       this.session.order = new Order()
-      this.$router.push({ name: 'chooseTabaco' })
+      this.$router.push({ name: 'choseTabaco' })
     },
     newOrder() {
       this.session.order = new Order()
