@@ -6,6 +6,7 @@ import OptionGroup from './OptionGroup'
 import Order from './Order'
 import Settings from './Settings'
 import Payment from './Payment'
+import Tabaco from './Tabaco'
 
 export {
   Auth,
@@ -15,5 +16,6 @@ export {
   OptionGroup,
   Order,
   Settings,
-  Payment
+  Payment,
+  Tabaco
 }
