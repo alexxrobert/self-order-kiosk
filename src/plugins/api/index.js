@@ -1,5 +1,6 @@
 import AuthApi from './AuthApi'
 import ItemGroupApi from './ItemGroupApi'
+import TabacoGroupApi from './TabacoGroupApi'
 import ItemApi from './ItemApi'
 import OptionGroupApi from './OptionGroupApi'
 import OptionApi from './OptionApi'
@@ -14,6 +15,7 @@ class Api {
     this._token = ''
     this.auth = new AuthApi()
     this.itemGroups = new ItemGroupApi()
+    this.tabacoGroups = new TabacoGroupApi()
     this.items = new ItemApi()
     this.optionGroups = new OptionGroupApi()
     this.options = new OptionApi()
@@ -30,6 +32,7 @@ class Api {
     this._locale = value
     this.items.locale = value
     this.itemGroups.locale = value
+    this.tabacoGroups.locale = value
     this.optionGroups.locale = value
     this.options.locale = value
   }
@@ -41,6 +44,7 @@ class Api {
   set virtualPath(value) {
     this._virtualPath = value ? `/${value}` : ''
     this.items.virtualPath = this._virtualPath
+    this.tabacoGroups.virtualPath = this._virtualPath
     this.itemGroups.virtualPath = this._virtualPath
     this.optionGroups.virtualPath = this._virtualPath
     this.options.virtualPath = this._virtualPath
