@@ -11,7 +11,7 @@
       </div>
       <div class="app-content">
      <div style="overflow: hidden; opacity: 0.30;">
-      <img src="/img/tabaco18.jpg" style="position: absolute; top: 190px; left: 20px;">
+      <img src="/img/tabaco18.jpg" style="position: absolute; top: 190px; left: 20px;" @click="newTabaco">
        <p style="font-size: 1.5rem; position: absolute; top: 480px; left: 10px;">Comprar tabaco, preguntar en la barra</p>
      </div>
          <VectorLogo/>
