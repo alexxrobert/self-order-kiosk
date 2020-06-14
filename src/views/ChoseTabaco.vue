@@ -47,6 +47,8 @@ export default {
       return
     }
     this.session.itemGroup = 9
+    let vvv = JSON.stringify(this.session)
+    console.log(vvv)
    // await this.listItemGroups()
     await this.listItems()
     this.$nextTick(() => this.initSwipeGesture())
