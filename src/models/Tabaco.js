@@ -1,4 +1,4 @@
-export default class Item {
+export default class Tabaco {
   constructor(params = {}) {
     this.id = params.id || ''
     this.name = params.name || ''
@@ -9,7 +9,7 @@ export default class Item {
   }
 
   increment() {
-    if (this.quantity < 9) {
+    if (this.quantity < 1) {
       this.quantity++
     }
   }
