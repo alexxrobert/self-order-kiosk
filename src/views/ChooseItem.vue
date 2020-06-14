@@ -53,6 +53,8 @@ export default {
   methods: {
     async listItems() {
       this.session.itemGroup.items = await this.$api.items.list(this.session.itemGroup.id)
+       let vvv = JSON.stringify(this.session)
+    console.log(vvv)
     },
     
     back() {
