@@ -12,7 +12,7 @@ export default class TabacoGroupApi {
     const response = await axios.get(path)
 
     if (response && response.status === 200) {
-      return response.data.itemGroups.map(params => new ItemGroup(params))
+      return response.data.tabacoGroups.map(params => new ItemGroup(params))
     }
 
     return null
