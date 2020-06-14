@@ -14,7 +14,7 @@
         <div class="d-block" >
           <div ref="swiper" >
             <div class="swiper-wrapper" >
-              <div class="swiper-slide" v-for="item in session.items" :key="item.fakeId" v-if="(item.takeout =='mixto') ||  (session.order.takeOut == (item.takeout =='llevar')) || (!session.order.takeOut == (item.takeout =='aqui'))">
+              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId" v-if="(item.takeout =='mixto') ||  (session.order.takeOut == (item.takeout =='llevar')) || (!session.order.takeOut == (item.takeout =='aqui'))">
                 <ItemButton ref="itemButton" :item="item" @click="select(item)" @imagePreload="loadImages"/>
               </div>
             </div>
@@ -52,7 +52,8 @@ export default {
   },
   methods: {
     async listItems() {
-      this.session.items = await this.$api.tabaco.list(1)
+      this.session.itemGroup = 9
+      this.session.itemGroup.items = await this.$api.tabaco.list(1)
     },
     
     back() {
@@ -63,9 +64,9 @@ export default {
 
       const swiper = new Swiper(this.$refs.swiper, {
         direction: 'horizontal',
-        //slidesPerView: Math.min(this.session.items.length, 3.25),//CHANGED
+        //slidesPerView: Math.min(this.session.itemGroup.items.length, 3.25),//CHANGED
         //slidesPerView: 4.50,
-        slidesPerView: Math.min(this.session.items.length, 4.33) ,
+        slidesPerView: Math.min(this.session.itemGroup.items.length, 4.33) ,
         slidesPerViewFit : false,
         //roundLengths: false,
         slidesPerColumn: this.slidesPerColumn(),
@@ -73,12 +74,12 @@ export default {
         centeredSlides: false,//CHANGED
         breakpoints: {
           [breakpoints[1280]]: {
-            slidesPerView: Math.min(this.session.items.length, 2.25),
+            slidesPerView: Math.min(this.session.itemGroup.items.length, 2.25),
             spaceBetween: 30,
             centeredSlides: false
           },
           [breakpoints[600]]: {
-            slidesPerView: Math.min(this.session.items.length, 1.5),
+            slidesPerView: Math.min(this.session.itemGroup.items.length, 1.5),
             spaceBetween: 20,
             centeredSlides: true
           }
