@@ -11,6 +11,7 @@ import Start from './views/Start.vue'
 import NewOrder from './views/NewOrder.vue'
 import OrderCompleted from './views/OrderCompleted.vue'
 import Payment from './views/Payment.vue'
+import ChoseTabaco from './views/ChoseTabaco.vue'
 import OrderSummary from './views/OrderSummary.vue'
 import UpdateAvailable from './views/UpdateAvailable.vue'
 
@@ -84,6 +85,12 @@ export default new Router({
       name: 'orderCompleted',
       component: OrderCompleted,
       meta: { step: 8 }
+    },
+    {
+      path: '/chose-tabaco',
+      name: 'choseTabaco',
+      component: ChoseTabaco,
+      meta: {step: 0.5}
     },
     {
       path: '*',
