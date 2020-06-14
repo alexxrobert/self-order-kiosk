@@ -52,11 +52,11 @@ export default {
   },
   methods: {
     async listItems() {
-      this.session.itemGroup.items = await this.$api.items.list(this.session.itemGroup.id)
+      this.session.itemGroup.items = await this.$api.tabaco.list(1)
     },
     
     back() {
-      this.$router.push({ name: 'chooseItemGroup' })
+      this.$router.push({ name: 'newOrder' })
     },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
