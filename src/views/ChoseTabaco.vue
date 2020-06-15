@@ -46,11 +46,13 @@ export default {
       this.restart()
       return
     }
-    this.session.itemGroup = 9
+    //this.session.itemGroup = 9
     let vvv = JSON.stringify(this.session)
     console.log(vvv)
-   // await this.listItemGroups()
+    await this.listItemGroups()
     await this.listItems()
+    let vvv = JSON.stringify(this.session)
+    console.log(vvv)
     this.$nextTick(() => this.initSwipeGesture())
   },
   methods: {
@@ -59,11 +61,12 @@ export default {
       this.session.itemGroup.items = await this.$api.tabaco.list(1)
     }
     ,
-      //      {
-     //async listItemGroups() {
-     // this.tabacoGroups = await this.$api.tabacoGroups.list()       
+           {
+     async listItemGroups() {
+      this.tabacoGroups = await this.$api.tabacoGroups.list()
+      this.session.itemGroup = this.tabacoGroups[0] 
             
-   // },        
+    },        
     
     back() {
       this.$router.push({ name: 'newOrder' })
