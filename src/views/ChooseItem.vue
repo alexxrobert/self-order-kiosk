@@ -54,7 +54,8 @@ export default {
     async listItems() {
       this.session.itemGroup.items = await this.$api.items.list(this.session.itemGroup.id)
        let vvv = JSON.stringify(this.session)
-    console.log(vvv)
+       let zzz = JSON.stringify(this.session.itemGroup.items)
+    console.log("session.itemGroup.items = " + zzz)
     },
     
     back() {
