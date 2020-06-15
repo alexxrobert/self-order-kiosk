@@ -81,7 +81,7 @@ export default {
     },
     next (){
        this.$router.push({ name: 'ChoseTabaco2' })
-    }
+    },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
 
