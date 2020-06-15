@@ -52,7 +52,8 @@ export default {
     gallery() {
       if (this.image instanceof ItemGroup) return 'item-group'
       if (this.image instanceof Item) return 'item'
-      return ''
+      //return ''
+      return 'item'  //MODIFIED
     },
     host() {
       return `${process.env.VUE_APP_API_BASE_URL}${this.$api.virtualPath}/gallery`
