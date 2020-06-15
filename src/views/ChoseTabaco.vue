@@ -46,6 +46,7 @@ export default {
       this.restart()
       return
     }
+    this.session.order.takeOut = true
     //this.session.itemGroup = 9
     let vvv = JSON.stringify(this.session)
     console.log("FIRST= " + vvv)
