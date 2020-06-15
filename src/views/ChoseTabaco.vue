@@ -59,6 +59,8 @@ export default {
     async listItems() {
       //this.session.itemGroup = 9
       this.session.itemGroup.items = await this.$api.tabaco.list(1)
+      let ttt = JSON.stringify(this.session.itemGroup.items)
+      console.log("session.itemGroup.items = " + ttt)
     },
            
      async listItemGroups() {
