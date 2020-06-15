@@ -63,7 +63,9 @@ export default {
            
      async listItemGroups() {
       this.tabacoGroups = await this.$api.tabacoGroups.list()
-      this.session.itemGroup = this.tabacoGroups[0] 
+      this.session.itemGroup = this.tabacoGroups[0]
+      let yyy = JSON.stringify(this.tabacoGroups)
+      console.log("GROUPS= " + yyy)
             
     },        
     
