@@ -19,6 +19,13 @@
 	  <div class="text-center mb-4 font-weight-bold" v-if="hayDinero">
 	{{ $t('ammount-paid') }}<Currency :amount="payment.totalpaid" class="font-weight-bold"/>
 	 </div>
+	 <div class="swiper-slide swiper-slide" data-swiper-column="0" data-swiper-row="0" style="order: 0; width: 331px; height:290px; margin-right: 30px; position: absolute; top: 190px; left: 20px; ">
+<button type="button" class="btn btn-card" style="transform-origin: 50% 50% 0px; visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><span class="img-progressive" alt="{{ session.order.items[0].name }}"><svg><filter id="svgBlurFilter"><feGaussianBlur stdDeviation="5"></feGaussianBlur><feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0"></feColorMatrix><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></svg><img src="http://kiosk2.maskekebab.com/burger-place/gallery/901.item.standard.jpg" class="original"></span><div style="font-size: 13pt; font-weight: bold; text-align: center; width: 100%;"><div>
+        {{ session.order.items[0].name }}
+      </div><p>
+ <Currency :amount="session.order.total()" class="font-weight-bold"/>
+</p></div></button>
+</div>
           <p class="text-center mb-4">
            <img src="img/gif_pay_white.gif" />
           </p>
