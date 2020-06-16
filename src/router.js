@@ -11,6 +11,7 @@ import Start from './views/Start.vue'
 import NewOrder from './views/NewOrder.vue'
 import OrderCompleted from './views/OrderCompleted.vue'
 import Payment from './views/Payment.vue'
+import PaymentTabaco from './views/PaymentTabaco.vue'
 import ChoseTabaco from './views/ChoseTabaco.vue'
 import ChoseTabaco2 from './views/ChoseTabaco2.vue'
 import OrderSummary from './views/OrderSummary.vue'
@@ -99,6 +100,12 @@ export default new Router({
       name: 'choseTabaco2',
       component: ChoseTabaco2,
       meta: {step: 0.6}
+    },
+    {
+      path: '/paymenttabaco',
+      name: 'paymentTabaco',
+      component: PaymentTabaco,
+      meta: {step: 0.7}
     },
     {
       path: '*',
