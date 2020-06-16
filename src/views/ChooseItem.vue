@@ -65,7 +65,7 @@ export default {
       if (!this.$refs.swiper) return
 
       const swiper = new Swiper(this.$refs.swiper, {
-        autoHeight: true,
+        height: 648,
         direction: 'horizontal',
         //slidesPerView: Math.min(this.session.itemGroup.items.length, 3.25),//CHANGED
         //slidesPerView: 4.50,
