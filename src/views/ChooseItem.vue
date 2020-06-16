@@ -65,7 +65,6 @@ export default {
       if (!this.$refs.swiper) return
 
       const swiper = new Swiper(this.$refs.swiper, {
-        height: 648,
         direction: 'horizontal',
         //slidesPerView: Math.min(this.session.itemGroup.items.length, 3.25),//CHANGED
         //slidesPerView: 4.50,
@@ -74,7 +73,7 @@ export default {
         //roundLengths: false,
         slidesPerColumn: this.slidesPerColumn(),
         spaceBetween: 30,
-        centeredSlides: false,//CHANGED
+        centeredSlides: true,//CHANGED
         breakpoints: {
           [breakpoints[1280]]: {
             slidesPerView: Math.min(this.session.itemGroup.items.length, 2.25),
