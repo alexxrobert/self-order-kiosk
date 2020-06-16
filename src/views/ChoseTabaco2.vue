@@ -73,7 +73,7 @@ export default {
     },        
     
     back() {
-      this.$router.push({ name: 'newOrder' })
+      this.$router.push({ name: 'choseTabaco' })
     },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
