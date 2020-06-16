@@ -14,7 +14,7 @@
         <div class="d-block" >
           <div ref="swiper" >
             <div class="swiper-wrapper" >
-              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId" v-if="(item.takeout =='mixto' && !item.outofstock) ||  (session.order.takeOut == (item.takeout =='llevar')) || (!session.order.takeOut == (item.takeout =='aqui'))">
+              <div class="swiper-slide" v-for="item in session.itemGroup.items" :key="item.fakeId" v-if="( (item.takeout =='mixto') && (!item.outofstock) ) ||  (session.order.takeOut == (item.takeout =='llevar')) || (!session.order.takeOut == (item.takeout =='aqui'))">
                 <ItemButton ref="itemButton" :item="item" @click="select(item)" @imagePreload="loadImages"/>
               </div>
             </div>
