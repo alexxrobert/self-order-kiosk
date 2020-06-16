@@ -4,7 +4,7 @@ export default class Item {
     this.name = params.name || ''
     this.price = params.price || 0
     this.takeout = params.takeout || 'mixto'
-    this.outofstock =  params.takeout || false
+    this.outofstock =  params.outofstock || false
     this.quantity = 1
     this.optionGroups = null
   }
