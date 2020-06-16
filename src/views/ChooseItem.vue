@@ -74,7 +74,7 @@ export default {
         slidesPerColumn: this.slidesPerColumn(),
         spaceBetween: 30,
         centeredSlides: false,//CHANGED
-        slidesOffsetBefore: 243,
+        //slidesOffsetBefore: 243,
         breakpoints: {
           [breakpoints[1280]]: {
             slidesPerView: Math.min(this.session.itemGroup.items.length, 2.25),
