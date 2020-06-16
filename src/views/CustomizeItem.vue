@@ -90,8 +90,15 @@ export default {
         this.formDirection = 'left'
         this.currentIndex++;
       } else {
-        this.session.addItemToOrder()
-        this.$router.push({ name: 'orderSummary' })
+       ///////////////////////////
+        if (this.session.order.mobile){
+          this.session.addItemToOrder()
+          this.$router.push({ name: 'paymentTabaco' })
+            }else{
+              this.session.addItemToOrder() 
+              this.$router.push({ name: 'orderSummary' })
+        }
+      /////////////////////////////
       }
     },
     restart() {
