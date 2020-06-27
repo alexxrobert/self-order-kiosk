@@ -40,6 +40,8 @@ export default {
   async mounted() {
     if (!this.optionGroup.options) {
       this.optionGroup.options = await this.$api.options.list(this.optionGroup.id)
+      let ooo = JSON.stringify(this.optionGroup.options)
+      console.log("this.optionGroup.options = " + ooo)
     }
 
     this.$nextTick(() => this.initSwipeGesture())
