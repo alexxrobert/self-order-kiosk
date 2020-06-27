@@ -42,6 +42,9 @@ export default {
       this.optionGroup.options = await this.$api.options.list(this.optionGroup.id)
       let ooo = JSON.stringify(this.optionGroup.options)
       console.log("this.optionGroup.options = " + ooo)
+      let urlx = `${process.env.VUE_APP_API_BASE_URL}/gallery`
+      console.log("imgurl = " + urlx)
+      
     }
 
     this.$nextTick(() => this.initSwipeGesture())
