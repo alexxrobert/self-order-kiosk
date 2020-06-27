@@ -4,20 +4,22 @@
       <div class="swiper-wrapper">
         <label class="swiper-slide d-flex align-items-center border-bottom p-3 p-lg-5 m-0"
           v-for="option in optionGroup.options" :key="option.id" >
-            <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice">
-              <input type="checkbox" v-model="option.checked" @change="toggle2($event,option)">
-              <span class="check-mark"></span> {{ option.name }}
-            </div>
-            <div class="radio radio-primary" v-else>
-              <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
-              <span class="check-mark"></span> {{ option.name }}
-            </div>
-            <div class="ml-auto text-primary" v-if="option.price > 0">
-              <Currency :amount="option.price"/>
-            </div>
-            <div class="pl-3 ml-auto text-muted" v-else>
-              {{ $t('no_cost') }}
-            </div>
+            <div v-show="(option.takeout =='mixto')  || ( session.order.takeOut == (option.takeout=="llevar") ) || ( !session.order.takeOut == (option.takeout=="aqui") )">
+              <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice">
+                <input type="checkbox" v-model="option.checked" @change="toggle2($event,option)">
+                <span class="check-mark"></span> {{ option.name }}
+              </div>
+              <div class="radio radio-primary" v-else>
+                <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
+                <span class="check-mark"></span> {{ option.name }}
+              </div>
+              <div class="ml-auto text-primary" v-if="option.price > 0">
+                <Currency :amount="option.price"/>
+              </div>
+              <div class="pl-3 ml-auto text-muted" v-else>
+                {{ $t('no_cost') }}
+              </div>
+             </div> 
         </label>
       </div>
     </div>
