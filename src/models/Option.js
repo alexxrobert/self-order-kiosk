@@ -5,5 +5,6 @@ export default class Option {
     this.price = params.price || 0
     this.checked = params.checked || false
     this.modifier = params.modifier || false
+    this.takeout = params.takeout || 'mixto'
   }
 }
