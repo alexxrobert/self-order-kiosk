@@ -74,7 +74,7 @@ export default {
       current.checked = true
     },
     toggle2($event, current) {
-      if (current.modifier & current.checked = true) {
+      if (current.modifier == true && current.checked == true) {
         this.optionGroup.options
           .filter(option => option.id !== current.id)
           .forEach(option => option.checked = false)
