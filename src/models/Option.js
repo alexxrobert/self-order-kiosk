@@ -4,5 +4,6 @@ export default class Option {
     this.name = params.name || ''
     this.price = params.price || 0
     this.checked = params.checked || false
+    this.modifier = params.modifier || false
   }
 }
