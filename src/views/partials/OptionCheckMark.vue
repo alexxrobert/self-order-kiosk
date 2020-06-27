@@ -87,6 +87,10 @@ export default {
 
         $event.target.checked = true
         current.checked = true
+        }else{
+        
+        if(current.checked==true) document.getElementById("img" + current.id).style.opacity = 0.30
+        if(current.checked==false) document.getElementById("img" + current.id).style.opacity = 1
         }
     }
   },
