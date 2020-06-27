@@ -7,7 +7,7 @@
               <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice">
                 <input type="checkbox" v-model="option.checked" @change="toggle2($event,option)">
                 <span class="check-mark"></span> {{ option.name }}
-                <img style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + 'tomato.jpg' " />
+                <img style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
               <div class="radio radio-primary" v-else>
                 <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
