@@ -79,7 +79,7 @@ export default {
           .filter(option => option.id !== current.id)
           .forEach(option => option.checked = false)
 
-        //$event.target.checked = true
+        $event.target.checked = true
         //current.checked = true
         }
     }
