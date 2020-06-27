@@ -95,7 +95,7 @@ export default {
       return !!this.optionGroup.options
     },
     imageUrl() {
-      return `${process.env.VUE_APP_API_BASE_URL}/gallery/` 
+      return `${process.env.VUE_APP_API_BASE_URL}${this.$api.virtualPath}/gallery/` 
       }
   }
 }
