@@ -11,6 +11,7 @@
               <div class="radio radio-primary" v-else>
                 <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
                 <span class="check-mark"></span> {{ option.name }}
+                <img style="position: absolute; left:300px;  box-sizing:border-box;" src="{{imageUrl}}tomato.jpg" />
               </div>
               <div class="ml-auto text-primary" v-if="option.price > 0">
                 <Currency :amount="option.price"/>
@@ -92,7 +93,10 @@ export default {
   computed: {
     hasOptions() {
       return !!this.optionGroup.options
-    }
+    },
+    imageUrl() {
+      return `${process.env.VUE_APP_API_BASE_URL}/gallery/` 
+      }
   }
 }
 </script>
