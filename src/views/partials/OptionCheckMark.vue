@@ -7,7 +7,7 @@
               <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice">
                 <input type="checkbox" v-model="option.checked" @change="toggle2($event,option)">
                 <span class="check-mark"></span> {{ option.name }}
-                <img v-bind:id="'img' +option.id" style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
+                <img v-bind:id="'img' +option.id" v-bind:style="option.checked ? 'opacity: 1;': 'opacity: 0.20' " style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
               <div class="radio radio-primary" v-else>
                 <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
@@ -89,8 +89,8 @@ export default {
         current.checked = true
         }else{
         
-        if(current.checked==true) document.getElementById("img" + current.id).style.opacity = 0.30
-        if(current.checked==false) document.getElementById("img" + current.id).style.opacity = 1
+        if(current.checked==true) document.getElementById("img" + current.id).style.opacity = 1
+        if(current.checked==false) document.getElementById("img" + current.id).style.opacity = 0.20
         }
     }
   },
