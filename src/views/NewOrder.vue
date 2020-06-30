@@ -45,10 +45,16 @@ export default {
    components: {
     VectorFlagUS, VectorFlagBR, VectorLogo
   },
+   data() {
+    return {
+      newOrder: {activated:false, timer: 300},
+      polling: null
+    }
+  },
   async mounted() {
   this.$api.virtualPath = "burger-place"
-          this.$api.token = "AccessTokenUsedByTheApplicationForAuthentication=="
-          this.session.started = true
+  this.$api.token = "AccessTokenUsedByTheApplicationForAuthentication=="
+  this.session.started = true
   
   
     if (!this.session.started) {
@@ -58,8 +64,18 @@ export default {
 
     const app = await this.$api.settings.get()
     this.session.theme = app.theme
+    this.pollData() ////here
   },
   methods: {
+    pollData () {
+		this.polling = setInterval(() => {
+		 this.getTabacoActivated()
+		}, 3000)
+	},
+    async getTabacoActivated() {
+    this.newOrder = await this.$api.activatetabaco.get("test")
+    console.log('activatetabaco = '+ this.newOrder.activated)
+    },
     changeLocale(locale) {
       this.$api.locale = locale
       this.$i18n.locale = locale
@@ -81,6 +97,19 @@ export default {
     }
   },
   computed: {
+    
+    isTabacoactivated(){
+    if (this.newOrder.activated){
+        clearInterval(this.polling)
+	//setTimeout(()=>{ this.exit(); }, 10000)
+	//setTimeout(()=>{ finishorder(); }, 5000)
+    	return true
+	}
+    //console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount + this.payment.opid)
+      console.log('activatetabaco2 = '+ this.newOrder.activated)
+    return false
+    },
+    
     url() {
       return `${process.env.VUE_APP_BASE_URL}#?code=${this.session.code}`
     }
