@@ -115,7 +115,7 @@ export default {
   	isPaymentdone(){
     if (this.payment.paymentstatus === 'finished'){
         clearInterval(this.polling)
-	let cashdro = getElementById("cashdro")
+	var cashdro = document.getElementById("cashdro")
 	cashdro.remove()
 	//setTimeout(()=>{ this.exit(); }, 10000)
 	setTimeout(()=>{ this.finishorder(); }, 3000)
