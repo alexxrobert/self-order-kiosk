@@ -16,6 +16,7 @@ import ChoseTabaco from './views/ChoseTabaco.vue'
 import ChoseTabaco2 from './views/ChoseTabaco2.vue'
 import OrderSummary from './views/OrderSummary.vue'
 import UpdateAvailable from './views/UpdateAvailable.vue'
+import TabacoCompleted from './views/TabacoCompleted.vue'
 
 Vue.use(Router)
 
@@ -106,6 +107,12 @@ export default new Router({
       name: 'paymentTabaco',
       component: PaymentTabaco,
       meta: {step: 0.7}
+    },
+    {
+      path: '/tabacocompleted',
+      name: 'tabacoCompleted',
+      component: TabacoCompleted,
+      meta: {step: 0.8}
     },
     {
       path: '*',
