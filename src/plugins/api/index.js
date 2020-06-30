@@ -7,6 +7,7 @@ import OptionApi from './OptionApi'
 import SettingsApi from './SettingsApi'
 import PaymentApi from './PaymentApi'
 import TabacoApi from './TabacoApi'
+import ActivateTabacoApi from '.ActivateTabacoApi'
 
 class Api {
   constructor() {
@@ -22,6 +23,7 @@ class Api {
     this.settings = new SettingsApi()
     this.payment = new PaymentApi()
     this.tabaco = new TabacoApi()
+    this.activatetabaco = new ActivateTabacoApi()
   }
 
   get locale() {
@@ -51,6 +53,7 @@ class Api {
     this.settings.virtualPath = this._virtualPath
     this.payment.virtualPath = this._virtualPath
     this.tabaco.virtualPath = this._virtualPath
+    this.activatetabaco.virtualPath = this._virtualPath
   }
 
   get token() {
