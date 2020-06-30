@@ -7,7 +7,7 @@ import Order from './Order'
 import Settings from './Settings'
 import Payment from './Payment'
 import Tabaco from './Tabaco'
-import ActivateTabaco './ActivateTabaco'
+import ActivateTabaco from './ActivateTabaco'
 
 export {
   Auth,
