@@ -10,7 +10,7 @@
         </h1>
       </div>
       <div class="app-content">
-     <div id="activetabaco" style="overflow: hidden; opacity: 0.30;">
+     <div id="activetabaco" v-bind:style="newOrder.activated ? 'opacity: 1;': 'opacity: 0.30'  style="overflow: hidden; opacity: 0.30;">
       <img src="/img/tabaco18.jpg" style="position: absolute; top: 190px; left: 20px;" @click="newTabaco">
        <p v-if="isTabacoactivated"></p>
        <p style="font-size: 1.5rem; position: absolute; top: 480px; left: 10px;" v-else>Comprar tabaco, preguntar en la barra</p>
@@ -104,6 +104,8 @@ export default {
     isTabacoactivated(){
     if (this.newOrder.activated){
         clearInterval(this.polling)
+	//var tbco = document.getElementById("activetabaco")
+	
 	//setTimeout(()=>{ this.exit(); }, 10000)
 	//setTimeout(()=>{ finishorder(); }, 5000)
     	return true
