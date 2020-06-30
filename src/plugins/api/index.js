@@ -7,7 +7,7 @@ import OptionApi from './OptionApi'
 import SettingsApi from './SettingsApi'
 import PaymentApi from './PaymentApi'
 import TabacoApi from './TabacoApi'
-import ActivateTabacoApi from '.ActivateTabacoApi'
+import ActivateTabacoApi from './ActivateTabacoApi'
 
 class Api {
   constructor() {
