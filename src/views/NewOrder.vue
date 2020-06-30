@@ -27,7 +27,7 @@
       </div>
      
       <div class="app-footer bg-primary p-3 p-md-5">
-        <span class="text-uppercase m-auto" @click="newOrder">
+        <span class="text-uppercase m-auto" @click="newOrderKebab">
           {{ $t('start_button') }}
         </span>
       </div>
@@ -90,7 +90,7 @@ export default {
       	this.$router.push({ name: 'choseTabaco' })
 	}
     },
-    newOrder() {
+    newOrderKebab() {
       this.session.order = new Order()
       //this.$router.push({ name: 'chooseItemGroup' })
       this.$router.push({ name: 'eatLocation' })
