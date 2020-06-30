@@ -7,6 +7,7 @@ import Order from './Order'
 import Settings from './Settings'
 import Payment from './Payment'
 import Tabaco from './Tabaco'
+import ActivateTabaco './ActivateTabaco'
 
 export {
   Auth,
@@ -17,5 +18,6 @@ export {
   Order,
   Settings,
   Payment,
-  Tabaco
+  Tabaco,
+  ActivateTabaco
 }
