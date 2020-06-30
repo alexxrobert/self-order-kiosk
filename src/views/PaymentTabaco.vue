@@ -27,7 +27,7 @@
 </p></div></button>
 </div>
           <p class="text-center mb-4">
-           <img src="img/gif_pay_white.gif" />
+           <img id="cashdro" src="img/gif_pay_white.gif" />
           </p>
           <h3 class="text-center mb-4" v-if="isPaymentdone">
             {{ $t('thank_you') }}</h3>
@@ -115,6 +115,8 @@ export default {
   	isPaymentdone(){
     if (this.payment.paymentstatus === 'finished'){
         clearInterval(this.polling)
+	let cashdro = getElementById("cashdro")
+	cashdro.remove()
 	//setTimeout(()=>{ this.exit(); }, 10000)
 	setTimeout(()=>{ this.finishorder(); }, 3000)
 	//this.finishorder()
