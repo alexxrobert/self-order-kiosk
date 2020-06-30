@@ -116,8 +116,8 @@ export default {
     if (this.payment.paymentstatus === 'finished'){
         clearInterval(this.polling)
 	//setTimeout(()=>{ this.exit(); }, 10000)
-	//setTimeout(()=>{ finishorder(); }, 5000)
-	finishorder()
+	setTimeout(()=>{ this.finishorder(); }, 3000)
+	//this.finishorder()
     	return true
 	}
     console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount + this.payment.opid)
