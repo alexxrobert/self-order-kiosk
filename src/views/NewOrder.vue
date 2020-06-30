@@ -10,9 +10,10 @@
         </h1>
       </div>
       <div class="app-content">
-     <div style="overflow: hidden; opacity: 0.30;">
+     <div id="activetabaco" style="overflow: hidden; opacity: 0.30;">
       <img src="/img/tabaco18.jpg" style="position: absolute; top: 190px; left: 20px;" @click="newTabaco">
-       <p style="font-size: 1.5rem; position: absolute; top: 480px; left: 10px;">Comprar tabaco, preguntar en la barra</p>
+       <p v-if="isTabacoactivated"></p>
+       <p style="font-size: 1.5rem; position: absolute; top: 480px; left: 10px;" v-else>Comprar tabaco, preguntar en la barra</p>
      </div>
          <VectorLogo/>
          <div class="text-center">
@@ -84,8 +85,10 @@ export default {
       this.$router.push({ name: 'newOrder' })
     },
     newTabaco() {
-      this.session.order = new Order()
-      this.$router.push({ name: 'choseTabaco' })
+      if (this.newOrder.activated){
+      	this.session.order = new Order()
+      	this.$router.push({ name: 'choseTabaco' })
+	}
     },
     newOrder() {
       this.session.order = new Order()
