@@ -69,7 +69,7 @@ export default {
     //this.parsedata()
     const totx = this.session.order.total()
     this.session.order.totale = totx.toPrecision(4)
-   // const ppp = await this.$api.payment.get(this.session.order.total())
+   // const ppp = await this.$api.paymenttabaco.get(this.session.order.total())
     //this.parsedata(ppp.version)
    // let rrr = JSON.stringify(ppp)
     //console.log('paymentstatus= ' + ppp.paymentstatus);
@@ -89,7 +89,7 @@ export default {
       //setTimeout(function(){alert(moc); }, 5000);
     },
     async getPaymentdata() {
-    this.payment = await this.$api.payment.get(this.session.order)
+    this.payment = await this.$api.paymenttabaco.get(this.session.order)
     this.session.order.opid = this.payment.opid
     console.log('pstatus= '+ this.payment.paymentstatus+' amm=' + this.payment.ammount)
     let vvv = JSON.stringify(this.session.order)
