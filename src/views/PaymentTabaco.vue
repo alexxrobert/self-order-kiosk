@@ -42,7 +42,7 @@
         <button type="button" class="btn btn-primary mx-auto" @click="exit" v-if="isPaymentdone">
           {{ $t('exit') }}
         </button>
-	<button type="button" class="btn btn-primary mx-auto" @click="exit" v-else>
+	<button type="button" class="btn btn-primary mx-auto" @click="exit" v-else-if="inProgress">
           {{ $t('cancel') }}
         </button>
       </div>
@@ -113,6 +113,14 @@ export default {
     }
   },
   computed: {
+        inProgress(){
+	if (this.payment.paymentstatus === 'inprogress'){
+		return true
+		}else{
+		return false
+		}
+	return false
+	},
   	isPaymentdone(){
     if (this.payment.paymentstatus === 'finished'){
         clearInterval(this.polling)
