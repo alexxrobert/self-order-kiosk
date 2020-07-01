@@ -99,10 +99,10 @@ export default {
     //return true
     },
     
-    exit() {
+    async exit() {
       this.session.order.tocancel = 1
-      this.$api.paymenttabaco.get(this.session.order)
-      setTimeout(()=>{ this.$router.push({ name: 'newOrder' }); }, 5000)
+      await this.$api.paymenttabaco.get(this.session.order)
+      setTimeout(()=>{ this.$router.push({ name: 'newOrder' }); }, 1000)
       //this.$router.push({ name: 'newOrder' })
     },
     restart() {
