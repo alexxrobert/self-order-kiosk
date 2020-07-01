@@ -23,7 +23,7 @@ class Api {
     this.options = new OptionApi()
     this.settings = new SettingsApi()
     this.payment = new PaymentApi()
-    this.paymenttabaco new PaymentTabacoApi()
+    this.paymenttabaco = new PaymentTabacoApi()
     this.tabaco = new TabacoApi()
     this.activatetabaco = new ActivateTabacoApi()
   }
