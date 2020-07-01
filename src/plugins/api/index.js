@@ -6,6 +6,7 @@ import OptionGroupApi from './OptionGroupApi'
 import OptionApi from './OptionApi'
 import SettingsApi from './SettingsApi'
 import PaymentApi from './PaymentApi'
+import PaymentTabacoApi from './PaymentTabacoApi'
 import TabacoApi from './TabacoApi'
 import ActivateTabacoApi from './ActivateTabacoApi'
 
@@ -22,6 +23,7 @@ class Api {
     this.options = new OptionApi()
     this.settings = new SettingsApi()
     this.payment = new PaymentApi()
+    this.paymenttabaco new PaymentTabacoApi()
     this.tabaco = new TabacoApi()
     this.activatetabaco = new ActivateTabacoApi()
   }
@@ -52,8 +54,10 @@ class Api {
     this.options.virtualPath = this._virtualPath
     this.settings.virtualPath = this._virtualPath
     this.payment.virtualPath = this._virtualPath
+    this.paymenttabaco.virtualPath = this._virtualPath
     this.tabaco.virtualPath = this._virtualPath
     this.activatetabaco.virtualPath = this._virtualPath
+    
   }
 
   get token() {
