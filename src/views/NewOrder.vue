@@ -87,6 +87,7 @@ export default {
     newTabaco() {
       if (this.newOrder.activated){
       	this.session.order = new Order()
+	clearInterval(this.polling)
       	this.$router.push({ name: 'choseTabaco' })
 	}
     },
@@ -103,7 +104,7 @@ export default {
     
     isTabacoactivated(){
     if (this.newOrder.activated){
-        //clearInterval(this.polling)
+        clearInterval(this.polling)
 	//var tbco = document.getElementById("activetabaco")
 	
 	//setTimeout(()=>{ this.exit(); }, 10000)
