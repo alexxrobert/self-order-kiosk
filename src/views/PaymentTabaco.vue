@@ -102,7 +102,8 @@ export default {
     exit() {
       this.session.order.tocancel = 1
       this.$api.paymenttabaco.get(this.session.order)
-      this.$router.push({ name: 'newOrder' })
+      setTimeout(()=>{ this.$router.push({ name: 'newOrder' }); }, 5000)
+      //this.$router.push({ name: 'newOrder' })
     },
     restart() {
       this.$router.push({ name: 'start' })
