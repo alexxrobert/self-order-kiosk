@@ -12,7 +12,7 @@
       <div class="app-content">
      <div id="activetabaco" v-bind:style="newOrder.activated ? 'opacity: 1;': 'opacity: 0.30'"  style="overflow: hidden; opacity: 0.30;">
       <img src="/img/tabaco18.jpg" style="position: absolute; top: 190px; left: 20px;" @click="newTabaco">
-       <p v-if="isTabacoactivated" style="font-size: 1.6rem; position: absolute; top: 480px; left: 10px;" @click="newTabaco">Toque para comprar tabaco</p>
+       <p v-if="isTabacoactivated" style="font-size: 1.6rem; position: absolute; top: 480px; left: 20px; background-color: #ff0000; color: #ffffff; font-weight: bold" @click="newTabaco">Toque para comprar tabaco</p>
        <p style="font-size: 1.5rem; position: absolute; top: 480px; left: 10px;" v-else>Comprar tabaco, preguntar en la barra</p>
      </div>
          <VectorLogo/>
