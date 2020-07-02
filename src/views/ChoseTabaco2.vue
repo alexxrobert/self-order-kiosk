@@ -47,6 +47,7 @@ export default {
       return
     }
     this.session.order.takeOut = true
+    this.session.order.mobile = true  ///////////////HERE
     //this.session.itemGroup = 9
     let vvv = JSON.stringify(this.session)
     console.log("FIRST= " + vvv)
