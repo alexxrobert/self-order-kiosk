@@ -26,6 +26,10 @@
           <FontAwesome icon="arrow-left"/>
           <span class="ml-3">{{ $t('back') }}</span>
         </button>
+        <button type="button" class="btn btn-primary ml-auto" @click="next">
+         Next
+         <FontAwesome icon="arrow-right"/>
+         </button>
       </div>
     </SafeArea>
   </SlideTransition>
@@ -75,6 +79,9 @@ export default {
     
     back() {
       this.$router.push({ name: 'choseTabaco' })
+    },
+    next (){
+       this.$router.push({ name: 'choseTabaco3' })
     },
     initSwipeGesture() {
       if (!this.$refs.swiper) return
