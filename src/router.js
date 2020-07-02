@@ -14,6 +14,7 @@ import Payment from './views/Payment.vue'
 import PaymentTabaco from './views/PaymentTabaco.vue'
 import ChoseTabaco from './views/ChoseTabaco.vue'
 import ChoseTabaco2 from './views/ChoseTabaco2.vue'
+import ChoseTabaco3 from './views/ChoseTabaco3.vue'
 import OrderSummary from './views/OrderSummary.vue'
 import UpdateAvailable from './views/UpdateAvailable.vue'
 import TabacoCompleted from './views/TabacoCompleted.vue'
@@ -101,6 +102,12 @@ export default new Router({
       name: 'choseTabaco2',
       component: ChoseTabaco2,
       meta: {step: 0.6}
+    },
+    {
+      path: '/chose-tabaco3',
+      name: 'choseTabaco3',
+      component: ChoseTabaco2,
+      meta: {step: 0.65}
     },
     {
       path: '/paymenttabaco',
