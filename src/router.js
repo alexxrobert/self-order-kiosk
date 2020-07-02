@@ -106,7 +106,7 @@ export default new Router({
     {
       path: '/chose-tabaco3',
       name: 'choseTabaco3',
-      component: ChoseTabaco2,
+      component: ChoseTabaco3,
       meta: {step: 0.65}
     },
     {
