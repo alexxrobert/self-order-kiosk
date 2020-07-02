@@ -59,7 +59,7 @@ export default {
   methods: {
     async listItems() {
       //this.session.itemGroup = 9
-      this.session.itemGroup.items = await this.$api.tabaco.list(2)
+      this.session.itemGroup.items = await this.$api.tabaco.list(3)
       let ttt = JSON.stringify(this.session.itemGroup.items)
       console.log("session.itemGroup.items = " + ttt)
     },
