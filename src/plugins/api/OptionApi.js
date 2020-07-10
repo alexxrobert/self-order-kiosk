@@ -8,7 +8,7 @@ export default class OptionApi {
   }
 
   async list(optionGroupId) {
-    const path = `${process.env.VUE_APP_API_BASE_URL}${this.virtualPath}/menu/${this.locale}/options/${optionGroupId}.json`
+    const path = `${process.env.VUE_APP_API_BASE_URL}${this.virtualPath}/menu/${this.locale}/options/${optionGroupId}.json?timestamp=${new Date().getTime()}`
     const response = await axios.get(path)
 
     if (response && response.status === 200) {
