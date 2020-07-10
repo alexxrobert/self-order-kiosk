@@ -62,7 +62,7 @@ export default {
       return `${this.host}/${this.image.id}.${this.gallery}`
     },
     standard() {
-      return `${this.imagePrefix}.standard.jpg`
+      return `${this.imagePrefix}.standard.jpg?timestamp=${new Date().getTime()}`
     },
     thumbnail() {
       return `${this.imagePrefix}.thumbnail.jpg`
