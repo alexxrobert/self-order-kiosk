@@ -6,5 +6,7 @@ export default class Option {
     this.checked = params.checked || false
     this.modifier = params.modifier || false
     this.takeout = params.takeout || 'mixto'
+    this.outofstock =  params.outofstock || false
+
   }
 }
