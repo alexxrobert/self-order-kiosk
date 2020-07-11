@@ -88,14 +88,14 @@ export default {
         if($event.target.checked == true){
           $event.target.checked = false
           current.checked = false
-          if(current.price==0){
+          if(current.price==0 && current.modifier==false){
           current.more = false
           document.getElementById("more-" + current.id).style.display = "none"
           }
         }else{
               $event.target.checked = true
               current.checked = true
-              if(current.price==0){
+              if(current.price==0 && current.modifier==false){
               document.getElementById("more-" + current.id).style.display = ""
               }
         }
