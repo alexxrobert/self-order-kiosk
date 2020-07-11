@@ -100,7 +100,7 @@ export default {
     toggley($event,current){
       if(current.more==true){
        current.more=false
-      }elseif(current.checked=false){
+      }elseif(current.checked==false){
           current.more=true
      }
     },
