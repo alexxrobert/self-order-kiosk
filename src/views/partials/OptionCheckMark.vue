@@ -99,7 +99,7 @@ export default {
               document.getElementById("more-" + current.id).style.display = ""
               }
         }
-       toggle2($event, current)
+       this.toggle2($event, current)
     },
     toggley($event,current){
       if(current.more==true){
