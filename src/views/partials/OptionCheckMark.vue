@@ -8,9 +8,9 @@
                 <input type="checkbox"  v-bind:id="option.id" v-model="option.checked" @change="toggle2($event,option)">
                 <label v-bind:for="option.id" class="check-mark"></label> {{ option.name }}
                 <img v-bind:id="'img' +option.id" v-bind:style="option.checked ? 'opacity: 1;': 'opacity: 0.20' " style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
-                <img v-bind:id="'more-img' +option.id" v-bind:style="option.more ? 'opacity: 1;': 'opacity: 0.00' " style="position: absolute; left:470px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
+                <img v-bind:id="'more-img' +option.id" v-bind:style="option.more ? 'opacity: 1;': 'opacity: 0.00' " style="position: absolute; left:400px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
-              <div style="position: absolute; left: 530px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false ">
+              <div style="position: absolute; left: 580px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false ">
                 <input type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
                 <label v-bind:for="option.id +'-more'" class="check-mark2"></label>Mas {{ option.name }}
                </div>
