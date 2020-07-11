@@ -12,7 +12,7 @@
               </div>
               <div v-bind:id="'more-' + option.id" style="position: absolute; left: 610px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false && option.price == 0" v-on:click="toggley($event,option)">
                 <input v-on:click.stop.prevent type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
-                <label v-bind:for="option.id +'-more'" class="check-mark2"></label>{{ $t('more') }}{{ option.name }}
+                <label v-bind:for="option.id +'-more'" class="check-mark2"></label>{{ $t('more') }}{{ option.name.toLowerCase() }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false" v-on:click="toggle($event, option)">
                 <input v-on:click.stop.prevent type="checkbox" v-bind:id="option.id" v-model="option.checked" @change="toggle($event, option)">
