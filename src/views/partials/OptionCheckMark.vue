@@ -5,7 +5,7 @@
         <div class="swiper-slide d-flex align-items-center border-bottom p-3 p-lg-5 m-0"
           v-for="option in optionGroup.options" :key="option.id" v-if="(!option.outofstock) && ( (option.takeout =='mixto')  || ( session.order.takeOut == (option.takeout=='llevar') ) || ( !session.order.takeOut == (option.takeout=='aqui') ) )">
               <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice" v-on:click="togglex($event,option)">
-                <input type="checkbox"  v-bind:id="option.id" v-model="option.checked" @change="toggle2($event,option)">
+                <input v-on:click.stop.prevent type="checkbox"  v-bind:id="option.id" v-model="option.checked" @change="toggle2($event,option)">
                 <label v-bind:for="option.id" class="check-mark"></label> {{ option.name }}
                 <img v-bind:id="'img' +option.id" v-bind:style="option.checked ? 'opacity: 1;': 'opacity: 0.20' " style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
                 <img v-on:click.stop.prevent="toggley($event,option)" v-bind:id="'more-img' +option.id" v-bind:style="option.more ? 'opacity: 1;': 'opacity: 0.00' " style="position: absolute; left:430px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
@@ -15,7 +15,7 @@
                 <label v-bind:for="option.id +'-more'" class="check-mark2"></label>{{ $t('more') }}{{ option.name }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false" v-on:click="toggle($event, option)">
-                <input type="checkbox" v-bind:id="option.id" v-model="option.checked" @change="toggle($event, option)">
+                <input v-on:click.stop.prevent type="checkbox" v-bind:id="option.id" v-model="option.checked" @change="toggle($event, option)">
                 <label v-bind:for="option.id" class="check-mark"></label> {{ option.name }}
               </div>
               <div class="ml-auto text-primary" v-if="option.price > 0">
