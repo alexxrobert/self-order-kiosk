@@ -11,7 +11,7 @@
                 <img v-on:click.stop.prevent="toggley($event,option)" v-bind:id="'more-img' +option.id" v-bind:style="option.more ? 'opacity: 1;': 'opacity: 0.00' " style="position: absolute; left:430px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
               <div v-bind:id="'more-' + option.id" style="position: absolute; left: 610px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false && option.price == 0" v-on:click="toggley($event,option)">
-                <input type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
+                <input v-on:click.stop.prevent type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
                 <label v-bind:for="option.id +'-more'" class="check-mark2"></label>{{ $t('more') }}{{ option.name }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false" v-on:click="toggle($event, option)">
