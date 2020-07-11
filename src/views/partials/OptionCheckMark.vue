@@ -85,17 +85,18 @@ export default {
       current.checked = true
     },
     togglex($event, current) {
-      
-      if($event.target.checked == true){
-        $event.target.checked = false
-        current.checked = false
-        current.more = false
-        document.getElementById("more-" + current.id).style.display = "none"
-      }else{
-            $event.target.checked = true
-            current.checked = true
-            document.getElementById("more-" + current.id).style.display = ""
-      }
+      if(current.price==0){
+        if($event.target.checked == true){
+          $event.target.checked = false
+          current.checked = false
+          current.more = false
+          document.getElementById("more-" + current.id).style.display = "none"
+        }else{
+              $event.target.checked = true
+              current.checked = true
+              document.getElementById("more-" + current.id).style.display = ""
+        }
+       } 
     },
     toggley($event,current){
       if(current.more==true){
