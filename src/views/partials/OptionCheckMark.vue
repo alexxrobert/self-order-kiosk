@@ -86,9 +86,13 @@ export default {
     },
     togglex($event, current) {
       
-
-      $event.target.checked = true
-      current.checked = true
+      if($event.target.checked == true){
+        $event.target.checked = false
+        current.checked = false
+      }else{
+            $event.target.checked = true
+            current.checked = true
+      }
     },
     toggle2($event, current) {
       if (current.modifier == true && current.checked == true) {
