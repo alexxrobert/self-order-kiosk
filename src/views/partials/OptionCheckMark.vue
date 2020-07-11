@@ -10,8 +10,8 @@
                 <img v-bind:id="'img' +option.id" v-bind:style="option.checked ? 'opacity: 1;': 'opacity: 0.20' " style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
               <div style="position: absolute; left: 480px" class="checkbox2 checkbox-primary" v-if="optionGroup.multichoice && option.modifier == false ">
-                <input type="checkbox" id="more" v-model="option.more" >
-                <span class="check-mark2"></span>Mas {{ option.name }}
+                <input type="checkbox" id="more" name="" value="true" v-model="option.more" >
+                <span class="check-mark2" id="more2"></span>Mas {{ option.name }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false">
                 <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
