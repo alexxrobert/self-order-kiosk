@@ -106,7 +106,7 @@ export default {
       if (current.modifier == true && current.checked == true) {
         this.optionGroup.options
           .filter( (option => option.id !== current.id) && (option => option.price == 0) )
-          .forEach(option => option.checked = false, option.more = false)
+          .forEach(option => option.checked = false, option => option.more = false)
 
         $event.target.checked = true
         current.checked = true
