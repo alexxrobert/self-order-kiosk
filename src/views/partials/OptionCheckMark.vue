@@ -11,7 +11,7 @@
               </div>
               <div style="position: absolute; left: 480px" class="checkbox2 checkbox-primary" v-if="optionGroup.multichoice && option.modifier == false ">
                 <input type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
-                <label v-bind:for="option.id +'-more'" class="check-mark" id="more2"></label>Mas {{ option.name }}
+                <label v-bind:for="option.id +'-more'" class="check-mark2"></label>Mas {{ option.name }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false">
                 <input type="checkbox" v-bind:id="option.id" v-model="option.checked" @change="toggle($event, option)">
