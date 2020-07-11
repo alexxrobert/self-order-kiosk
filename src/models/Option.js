@@ -7,6 +7,8 @@ export default class Option {
     this.modifier = params.modifier || false
     this.takeout = params.takeout || 'mixto'
     this.outofstock =  params.outofstock || false
+    this.more =  params.more || false
+    this.less =  params.less || false
 
   }
 }
