@@ -28,6 +28,10 @@ $themes: (
     .checkbox-primary {
       @include checkbox-variant($color);
     }
+    
+    .checkbox-primary2 {
+      @include checkbox-variant2($color);
+    }
 
     .radio-primary {
       @include radio-variant($color);
