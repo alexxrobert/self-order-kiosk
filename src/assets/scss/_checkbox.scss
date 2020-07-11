@@ -61,7 +61,7 @@
     height: 0;
     width: 0;
 
-    + .check-mark {
+    + .check-mark2 {
       background-color: $white;
       border: .125rem solid darken($gray-500, 10%);
       cursor: pointer;
@@ -84,15 +84,15 @@
       }
     }
 
-    &:focus + .check-mark {
+    &:focus + .check-mark2 {
       box-shadow: 0 0 0 .2rem rgba(darken($gray-500, 10%), .25);
     }
 
-    &:checked + .check-mark {
+    &:checked + .check-mark2 {
       background: darken($gray-500, 10%);
     }
 
-    &:disabled + .check-mark {
+    &:disabled + .check-mark2 {
       cursor: not-allowed;
     }
   }
