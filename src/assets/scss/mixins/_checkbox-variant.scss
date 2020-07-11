@@ -18,3 +18,24 @@
     }
   }
 }
+
+@mixin checkbox-variant2($color) {
+  input[type=checkbox] {
+    + .check-mark2 {
+      border-color: $color;
+    }
+
+    &:focus + .check-mark2 {
+      box-shadow: 0 0 0 .2rem rgba($color, .25);
+    }
+
+    &:checked + .check-mark2 {
+      background: $color;
+    }
+
+    &:checked:disabled + .check-mark2 {
+      background: lighten($color, 20%);
+      border-color: lighten($color, 20%);
+    }
+  }
+}
