@@ -14,7 +14,7 @@
                 <input type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
                 <label v-bind:for="option.id +'-more'" class="check-mark2"></label>{{ $t('more') }}{{ option.name }}
                </div>
-              <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false">
+              <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false" v-on:click="toggle($event, option)">
                 <input type="checkbox" v-bind:id="option.id" v-model="option.checked" @change="toggle($event, option)">
                 <label v-bind:for="option.id" class="check-mark"></label> {{ option.name }}
               </div>
