@@ -4,13 +4,13 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide d-flex align-items-center border-bottom p-3 p-lg-5 m-0"
           v-for="option in optionGroup.options" :key="option.id" v-if="(!option.outofstock) && ( (option.takeout =='mixto')  || ( session.order.takeOut == (option.takeout=='llevar') ) || ( !session.order.takeOut == (option.takeout=='aqui') ) )">
-              <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice">
+              <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice" v-on:click="toglex($event,option)">
                 <input type="checkbox"  v-bind:id="option.id" v-model="option.checked" @change="toggle2($event,option)">
                 <label v-bind:for="option.id" class="check-mark"></label> {{ option.name }}
                 <img v-bind:id="'img' +option.id" v-bind:style="option.checked ? 'opacity: 1;': 'opacity: 0.20' " style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
-                <img v-bind:id="'more-img' +option.id" v-bind:style="option.more ? 'opacity: 1;': 'opacity: 0.00' " style="position: absolute; left:400px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
+                <img v-bind:id="'more-img' +option.id" v-bind:style="option.more ? 'opacity: 1;': 'opacity: 0.00' " style="position: absolute; left:430px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
-              <div style="position: absolute; left: 580px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false ">
+              <div style="position: absolute; left: 610px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false ">
                 <input type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
                 <label v-bind:for="option.id +'-more'" class="check-mark2"></label>Mas {{ option.name }}
                </div>
@@ -77,6 +77,14 @@ export default {
       else return 4.5
     },
     toggle($event, current) {
+      this.optionGroup.options
+        .filter(option => option.id !== current.id)
+        .forEach(option => option.checked = false)
+
+      $event.target.checked = true
+      current.checked = true
+    },
+    togglex($event, current) {
       this.optionGroup.options
         .filter(option => option.id !== current.id)
         .forEach(option => option.checked = false)
