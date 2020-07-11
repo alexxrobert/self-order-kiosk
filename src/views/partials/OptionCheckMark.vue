@@ -6,16 +6,16 @@
           v-for="option in optionGroup.options" :key="option.id" v-if="(!option.outofstock) && ( (option.takeout =='mixto')  || ( session.order.takeOut == (option.takeout=='llevar') ) || ( !session.order.takeOut == (option.takeout=='aqui') ) )">
               <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice">
                 <input type="checkbox" v-model="option.checked" @change="toggle2($event,option)">
-                <span class="check-mark"></span> {{ option.name }}
+                <label class="check-mark"></label> {{ option.name }}
                 <img v-bind:id="'img' +option.id" v-bind:style="option.checked ? 'opacity: 1;': 'opacity: 0.20' " style="position: absolute; left:300px;  box-sizing:border-box;"  v-bind:src="imageUrl + option.id +'.jpg' " />
               </div>
               <div style="position: absolute; left: 480px" class="checkbox2 checkbox-primary" v-if="optionGroup.multichoice && option.modifier == false ">
                 <input type="checkbox" id="more" name="" value="true" v-model="option.more" >
-                <span class="check-mark2" id="more2"></span>Mas {{ option.name }}
+                <label class="check-mark" id="more2"></label>Mas {{ option.name }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false">
                 <input type="checkbox" v-model="option.checked" @change="toggle($event, option)">
-                <span class="check-mark"></span> {{ option.name }}
+                <label class="check-mark"></label> {{ option.name }}
               </div>
               <div class="ml-auto text-primary" v-if="option.price > 0">
                 <Currency :amount="option.price"/>
