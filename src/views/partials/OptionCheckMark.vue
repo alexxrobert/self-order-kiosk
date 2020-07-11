@@ -94,7 +94,7 @@ export default {
       }else{
             $event.target.checked = true
             current.checked = true
-            document.getElementById("more-" + current.id).style.display = "block"
+            document.getElementById("more-" + current.id).style.display = ""
       }
     },
     toggley($event,current){
