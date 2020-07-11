@@ -12,7 +12,7 @@
               </div>
               <div v-else-if="option.checked" style="position: absolute; left: 610px" class="checkbox2 checkbox-primary2" v-if="optionGroup.multichoice && option.modifier == false ">
                 <input type="checkbox" v-bind:id="option.id +'-more'" v-model="option.more" >
-                <label v-bind:for="option.id +'-more'" class="check-mark2"></label>Mas {{ option.name }}
+                <label v-bind:for="option.id +'-more'" class="check-mark2"></label>{{ $t('more') }}{{ option.name }}
                </div>
               <div class="radio radio-primary" v-else-if="optionGroup.multichoice == false">
                 <input type="checkbox" v-bind:id="option.id" v-model="option.checked" @change="toggle($event, option)">
@@ -146,10 +146,12 @@ export default {
 <i18n>
 {
   "es": {
-    "no_cost": "gratis"
+    "no_cost": "gratis",
+    "more" : "Más "
   },
   "en": {
-    "no_cost": "no cost"
+    "no_cost": "no cost",
+    "more" : "More "
   }
 }
 </i18n>
