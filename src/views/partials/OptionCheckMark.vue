@@ -2,7 +2,7 @@
   <SlideTransition direction="left" v-if="hasOptions">
     <div ref="swiper" class="swiper-container flex-grow-1">
       <div class="swiper-wrapper">
-        <div class="swiper-slide d-flex align-items-center border-bottom p-3 p-lg-5 m-0"
+        <div class="swiper-slide d-flex align-items-center border-bottom p-3 p-lg-4 m-0"
           v-for="option in optionGroup.options" :key="option.id" v-if="(!option.outofstock) && ( (option.takeout =='mixto')  || ( session.order.takeOut == (option.takeout=='llevar') ) || ( !session.order.takeOut == (option.takeout=='aqui') ) )">
               <div class="checkbox checkbox-primary" v-if="optionGroup.multichoice" v-on:click="togglex($event,option)">
                 <input v-on:click.stop.prevent type="checkbox"  v-bind:id="option.id" v-model="option.checked">
