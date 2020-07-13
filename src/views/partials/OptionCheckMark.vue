@@ -85,7 +85,7 @@ export default {
       current.checked = true
     },
     togglex($event, current) {
-        if($event.target.checked == true){
+        if(current.checked == true){
           $event.target.checked = false
           current.checked = false
           if(current.price==0 && current.modifier==false){
