@@ -118,11 +118,13 @@ export default {
           .filter( (option => option.id !== current.id) && (option => option.price == 0) )
           .forEach(option => option.more = false)
           
-          
-          this.optionGroup.options
-          .filter( (option => option.id !== current.id) && (option => option.price == 0) )
-          .forEach(option => document.getElementById("more-" + option.id).style.display = "none")
-           
+          try {
+            this.optionGroup.options
+            .filter( (option => option.id !== current.id) && (option => option.price == 0) )
+            .forEach(option => document.getElementById("more-" + option.id).style.display = "none")
+              }catch (error) {
+                  console.error(error)
+                }
 
         $event.target.checked = true
         current.checked = true
